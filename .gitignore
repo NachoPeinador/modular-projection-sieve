@@ -1,0 +1,47 @@
+# ==========================================
+# 1. Python & Numba
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.numba_cache/
+.pytest_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# ==========================================
+# 2. Jupyter Notebooks & Google Colab
+# ==========================================
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ==========================================
+# 3. Lean 4 & Lake (Asistente de Demostraciones)
+# ==========================================
+# Directorio de compilación de Lake (gestor de paquetes de Lean 4)
+.lake/
+build/
+
+# Archivos binarios e interfaz generados por Lean
+*.olean
+*.ilean
+*.c
+
+# ==========================================
+# 4. Archivos temporales y de datos grandes
+# (Zenodo debe alojar los .pkl.gz grandes, no GitHub)
+# ==========================================
+*.pkl.gz
+*.log
+
+# ==========================================
+# 5. Sistema Operativo y Editores (VS Code)
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
