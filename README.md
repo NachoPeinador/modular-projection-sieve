@@ -104,23 +104,34 @@ To guarantee 100% open-science reproducibility, the experimental validation and 
 
 ```text
 modular-projection-sieve/
-├── 📂 Papers/                           # Academic Manuscripts & LaTeX Source
-│   ├── 📄 Modular_Projection_Sieve_EN.pdf # Full English Paper (PDF)
-│   ├── 📄 Modular_Projection_Sieve_ES.pdf # Full Spanish Paper (PDF)
-│   └── 📝 Main_Manuscript.tex          # LaTeX Source Code
+├── 📂 Papers/                                                  # Manuscritos en LaTeX y PDFs finales
+│   ├── 📄 Modular_Projection_Sieve_EN.pdf                      # Artículo final en Inglés (PDF)
+│   ├── 📄 Modular_Projection_Sieve_ES.pdf                      # Artículo final en Español (PDF)
+│   └── 📝 Main_Manuscript.tex                                 # Código fuente LaTeX
 │
-├── 📂 Notebooks/                        # Open Computational Laboratory
-│   ├── 📓 Experimental_Validation_Complete.ipynb # Numba Execution & Scaling
-│   ├── 📓 Quantum_Spectroscopy_GOE.ipynb         # Operator H_N & GOE Analysis
-│   └── 📓 Formal_Verification_Lean4.ipynb        # Lean 4 Certified Proof Suite
+├── 📂 Notebooks/                                               # Cuadernos interactivos y muestras
+│   ├── 📓 Algebraic_Theory_of_Modular_Projection_Sieving.ipynb # Cuaderno maestro en Inglés (Python + GOE + Lean 4)
+│   ├── 📄 Algebraic_Theory_of_Modular_Projection_Sieving.pdf   # PDF impreso de la ejecución en Inglés
+│   ├── 📓 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb # Cuaderno maestro en Español
+│   ├── 📄 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.pdf   # PDF impreso de la ejecución en Español
+│   └── 📄 primes_audit_k100000_sample.txt                       # Muestra de auditoría de primos generada
 │
-├── 📂 Lean/                             # Formal Proof Source Files
-│   ├── 📄 lakefile.lean                 # Lake Package Configuration
-│   └── 📄 ModularSieve.lean             # Lean 4 Proof Definitions & Theorems
+├── 📂 Images/                                                  # Gráficos de alta resolución generados por Colab
+│   ├── 📊 ground_state_spectrum.png                            # Espectro del estado fundamental (Primos Gemelos Δk=0)
+│   ├── 📈 asymptotic_evolution_cramer.png                      # Evolución topológica de saltos y envolvente de Cramér
+│   └── 📉 goe_spectroscopy_staircase.png                       # Espectroscopía GOE y repulsión de niveles
 │
-├── 📜 .gitignore                        # Python, Jupyter & Lean 4 Ignore Filters
-├── 📜 LICENSE                           # MIT License
-└── 📜 README.md                         # Repository Documentation
+├── 📂 Lean/                                                    # Proyecto completo de verificación formal en Lean 4
+│   ├── 📄 lean-toolchain                                       # Versión fijada del compilador Lean 4
+│   ├── 📄 lakefile.toml                                        # Configuración del paquete de construcción Lake
+│   ├── 📄 lake-manifest.json                                   # Lockfile de versiones exactas de Mathlib
+│   ├── 📄 Entanglement.lean                                    # Módulo principal de demostraciones de entrelazamiento
+│   ├── 📄 Full_Validation.lean                                 # Suite completa de verificación formal libre de axiomas
+│   └── 📂 Entanglement/                                        # Submódulos auxiliares de demostración
+│
+├── 📜 .gitignore                                               # Filtros para ignorar .pkl.gz, .lake/ y temporales
+├── 📜 LICENSE                                                  # Licencia MIT
+└── 📜 README.md                                                # Documentación principal del repositorio
 
 ```
 
