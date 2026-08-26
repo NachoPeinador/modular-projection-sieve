@@ -22,7 +22,7 @@ env/
 # ==========================================
 # 3. Lean 4 & Lake (Asistente de Demostraciones)
 # ==========================================
-# Directorio de compilación de Lake (gestor de paquetes de Lean 4)
+# Directorio de compilación de Lake
 .lake/
 build/
 
@@ -32,14 +32,28 @@ build/
 *.c
 
 # ==========================================
-# 4. Archivos temporales y de datos grandes
-# (Zenodo debe alojar los .pkl.gz grandes, no GitHub)
+# 4. Compilación de LaTeX (Carpeta Papers/)
+# ==========================================
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# ==========================================
+# 5. Archivos temporales, dumps y comprimidos
+# (Zenodo aloja los datos pesados, no GitHub)
 # ==========================================
 *.pkl.gz
+*.zip
+*.tar.gz
 *.log
 
 # ==========================================
-# 5. Sistema Operativo y Editores (VS Code)
+# 6. Sistema Operativo y Editores
 # ==========================================
 .DS_Store
 Thumbs.db
