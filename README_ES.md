@@ -1,0 +1,176 @@
+# 🌀 Criba por Proyección Modular
+
+### Cribado de Primos con Memoria Sublineal mediante Proyección sobre $\mathbb{Z}/6\mathbb{Z}$, Entrelazamiento Quiral $K_{\min}\pm$ y Espectroscopía Cuántica GOE
+
+[![Abrir en Colab (EN)](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
+[![Verificación Lean 4](https://img.shields.io/badge/Lean_4-Demostración_Certificada-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043294-blue.svg)](https://doi.org/10.5281/zenodo.22043294)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
+[![Artículo PDF](https://img.shields.io/badge/Artículo-Leer_PDF-B31B1B?style=flat&logo=latex&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Papers/Modular_Projection_Sieve_ES.pdf)
+
+---
+
+## 🎯 TL;DR – Los Esenciales
+
+### 🔬 **Núcleo Teórico**
+
+* 🧩 **Proyección Modular sobre $(\mathbb{Z}/6\mathbb{Z})^\times$:** Reinterpreta los números primos $p > 3$ como índices posicionales $k$ en dos canales quirales ($6k \pm 1$), eliminando de forma pasiva el $66.67\%$ del espacio de búsqueda entero sin asignación de memoria.
+* ⚛️ **Entrelazamiento Primo-Coprimo ($K_{\min}\pm$):** Revela que los enteros primos en $(\mathbb{Z}/6\mathbb{Z})^\times$ forman pares conjugados que determinan de manera determinista los umbrales de generación de compuestos. El estado fundamental ($\Delta k = 0$) corresponde geométricamente a pares de primos gemelos.
+* 🌌 **Caos Cuántico Discreto (GOE):** La representación matricial del operador de criba $\mathbf{H}_N = MM^T$ exhibe un espacio nulo degenerado (colapso dimensional del $99.99\%$ que aísla los primos) y repulsión de niveles excitados ($\langle r \rangle \approx 0.4989$) perteneciente al **Ensamble Ortogonal Gaussiano (GOE)**.
+
+### ⚡ **Marcas de Rendimiento Computacional**
+
+* 💾 **Huella de Memoria Ultra-Reducida:** Opera bajo una complejidad espacial determinista de $\Theta(\sqrt{N}/\log N)$. Requiere apenas **$53.1$ KB** de RAM de trabajo para $N=10^9$ (más de $2\,240\times$ menos memoria que la Criba de Eratóstenes clásica).
+* 🎯 **Exactitud Determinista:** Tasa de error del $0.0\%$ hasta $N=10^9$, reproduciendo el conteo exacto de $\pi(10^9) = 50\,847\,534$ primos.
+* 🔒 **Certificación Libre de Axiomas:** El isomorfismo posicional, los umbrales $K_{\min}\pm$ y la autoadjuntidad matricial estricta ($\mathbf{H}_N^\dagger = \mathbf{H}_N$) están verificados mecanizadamente sin axiomas omitidos (`sorry-free`) en **Lean 4**.
+
+---
+
+## 🔍 Visión General de la Investigación
+
+La distribución de los números primos se estudia tradicionalmente mediante algoritmos multiplicativos (como la Criba de Eratóstenes) o a través de los ceros de la función zeta de Riemann.
+
+Este repositorio introduce una **Teoría Algebraica de Cribado por Proyección Modular** que conecta la teoría de números, el análisis armónico discreto y la teoría de matrices aleatorias (RMT):
+
+1. **Isomorfismo Posicional de Índices:** Al proyectar $\mathbb{N}$ sobre el grupo de unidades $(\mathbb{Z}/6\mathbb{Z})^\times = \{1, 5\}$, la divisibilidad $p \mid N$ se traduce en un problema topológico de evasión de redes sobre índices discretos $k \in \mathbb{N}^+$.
+2. **Arquitectura Apta para Hardware Restringido:** Dado que la primalidad se evalúa bajo demanda sin mantener un vector booleano de marcado de tamaño $N$, el estado de trabajo solo requiere almacenar tuplas de primos base hasta $\sqrt{N}$. Esto proporciona una solución óptima para sistemas embebidos, dispositivos IoT y criptografía ligera.
+3. **Análogo Discreto de Hilbert-Pólya:** Mientras que los ceros continuos de $\zeta(s)$ obedecen estadísticas del Ensamble Unitario Gaussiano (GUE), nuestro operador discreto de criba real y simétrico $\mathbf{H}_N$ actúa como un análogo cuántico real con simetría de inversión temporal gobernado por el Ensamble Ortogonal Gaussiano (GOE).
+
+---
+
+## 🧭 Arquitectura Conceptual
+
+```mermaid
+graph TD
+    A["Base Algebraica<br>Anillo Z/6Z y Grupo de Unidades (Z/6Z)ˣ"] --> B["Isomorfismo Posicional<br>N = 6k ± 1 ↔ k"]
+    B --> C["Entrelazamiento Primo-Coprimo<br>Umbrales Asimétricos Kmin±"]
+    
+    C --> D["Criba de Memoria Ultra-Baja<br>Huella Θ(√N/log N)"]
+    C --> E["Topología del Estado Fundamental<br>Primos Gemelos en Δk = 0"]
+    C --> F["Operador Discreto de Criba<br>Matriz H_N = M Mᵀ"]
+    
+    F --> G["Espacio Nulo Degenerado λ = 0<br>Aísla Estados Primos"]
+    F --> H["Espectro Excitado λ > 0<br>Caos Cuántico GOE ⟨r⟩ ≈ 0.4989"]
+    
+    style A fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style F fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style H fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+
+```
+
+---
+
+## 📊 Comparativa de Rendimiento y Complejidad
+
+La siguiente tabla ubica la Criba por Proyección Modular dentro de la jerarquía clásica de compensación tiempo-espacio:
+
+| Algoritmo | Memoria de Trabajo | Complejidad Temporal | Complejidad Lógica | Caso de Uso Ideal |
+| --- | --- | --- | --- | --- |
+| **Criba de Eratóstenes Clásica** | $O(N)$ | $O(N \log \log N)$ | Mínima | Estaciones de Trabajo con Alta RAM |
+| **Criba Segmentada** | $O(\sqrt{N} + S)$ | $O(N \log \log N)$ | Media | Segmentación de Alta Velocidad en CPU |
+| **Criba Compacta (Sorenson)** | $O(\sqrt{N})$ | $O(N)$ | Alta | Optimización Algorítmica |
+| **Proyección Modular (Este Trabajo)** | $\mathbf{\Theta(\sqrt{N}/\log N)}$ | $\mathbf{O(N^{3/2}/\log N)}$ | **Baja (Ultraligera)** | **IoT, Embebidos y Smartcards** |
+| **Criba de Atkin** | $O(N^{1/2+\epsilon})$ | $O(N/\log \log N)$ | Muy Alta | Cotas Teóricas Superiores |
+
+---
+
+## 🚀 Laboratorio Computacional Interactivo
+
+Para garantizar una reproducibilidad del $100\%$ bajo los estándares de Ciencia Abierta, la auditoría experimental completa y la suite de demostraciones formales se distribuyen en cuadernos interactivos listos para ejecutar en la nube:
+
+### 🇬🇧 Cuaderno Maestro en Inglés (Laboratorio Completo)
+
+* **Cuaderno Interactivo:** [`Algebraic_Theory_of_Modular_Projection_Sieving.ipynb`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
+* **Impresión en PDF:** [`Algebraic_Theory_of_Modular_Projection_Sieving.pdf`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.pdf)
+
+### 🇪🇸 Cuaderno Maestro en Español (Laboratorio Completo)
+
+* **Cuaderno Interactivo:** [`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.ipynb)
+* **Impresión en PDF:** [`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.pdf`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.pdf)
+
+**Cada cuaderno integra la secuencia completa de verificación en 3 fases:**
+
+1. **Demostraciones Automatizadas en Lean 4:** Despliegue de `elan`/Mathlib y certificación mecanizada (`sorry-free`) de isomorfismos posicionales, umbrales $K_{\min}\pm$, autoadjuntidad y factorización del estado fundamental de primos gemelos.
+2. **Ejecución Algorítmica y Escalado:** Código optimizado con compilación JIT (Numba) que reproduce el conteo exacto de $\pi(N)$ hasta $N=10^9$, auditoría de memoria ($53.1$ KB RSS) y convergencia de ratio quiral ($c_1/c_5 \to 1.0000$).
+3. **Espectroscopía Cuántica y RMT:** Construcción matricial de $\mathbf{H}_N = MM^T$ hasta $10^7$ estados, colapso del espacio nulo ($99.99\%$) y análisis de repulsión de niveles GOE ($\langle r \rangle \approx 0.4989$).
+
+---
+
+## 📁 Estructura del Repositorio
+
+```text
+modular-projection-sieve/
+├── 📂 Papers/                                                  # Manuscritos Académicos y Fuente LaTeX
+│   ├── 📄 Modular_Projection_Sieve_EN.pdf                      # Artículo Completo en Inglés (PDF)
+│   ├── 📄 Modular_Projection_Sieve_ES.pdf                      # Artículo Completo en Español (PDF)
+│   └── 📝 Main_Manuscript.tex                                 # Código Fuente LaTeX
+│
+├── 📂 Notebooks/                                               # Laboratorio Maestro de Experimentos y Verificación
+│   ├── 📓 Algebraic_Theory_of_Modular_Projection_Sieving.ipynb # Cuaderno Maestro en Inglés (Python + GOE + Lean 4)
+│   ├── 📄 Algebraic_Theory_of_Modular_Projection_Sieving.pdf   # Impresión Completa en PDF de la Ejecución en Inglés
+│   ├── 📓 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb # Cuaderno Maestro en Español
+│   ├── 📄 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.pdf   # Impresión Completa en PDF de la Ejecución en Español
+│   └── 📄 primes_audit_k100000_sample.txt                       # Muestra de Auditoría de Ejecución
+│
+├── 📂 Images/                                                  # Figuras Generadas en Alta Resolución
+│   ├── 📊 ground_state_spectrum.png                            # Espectro del estado fundamental de primos gemelos (Δk=0)
+│   ├── 📈 asymptotic_evolution_cramer.png                      # Evolución del salto topológico y cota de Cramér
+│   └── 📉 goe_spectroscopy_staircase.png                       # Repulsión de niveles GOE y escalera espectral
+│
+├── 📂 Lean/                                                    # Proyecto de Demostración Formal (Lean 4 / Mathlib)
+│   ├── 📄 lean-toolchain                                       # Versión fijada del compilador Lean 4
+│   ├── 📄 lakefile.toml                                        # Configuración de construcción Lake
+│   ├── 📄 lake-manifest.json                                   # Registro congelado de dependencias Mathlib
+│   ├── 📄 Entanglement.lean                                    # Módulo principal de teoría de entrelazamiento
+│   ├── 📄 Full_Validation.lean                                 # Suite de certificación completa libre de axiomas
+│   └── 📂 Entanglement/                                        # Submódulos auxiliares de demostración
+│
+├── 📜 .gitignore                                               # Filtros de exclusión en Git (.pkl.gz, cachés)
+├── 📜 LICENSE                                                  # Licencia MIT
+└── 📜 README.md                                                # Documentación Principal del Repositorio
+
+```
+
+---
+
+## ⚖️ Licencia
+
+Este repositorio se distribuye bajo los términos de la **[Licencia MIT](https://www.google.com/search?q=LICENSE)**.
+
+*Eres libre de usar, modificar, distribuir e integrar este software y sus demostraciones formales para aplicaciones académicas, personales o comerciales, siempre que se otorgue el crédito correspondiente al autor original.*
+
+---
+
+## 📝 Citación
+
+Si este marco de proyección modular, la formulación de entrelazamiento $K_{\min}\pm$ o las demostraciones en Lean 4 resultan de utilidad para tu investigación, por favor cita este trabajo:
+
+**BibTeX:**
+
+```bibtex
+@misc{peinador2026modular,
+  author       = {Peinador Sala, José Ignacio},
+  title        = {Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in Prime Distribution},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22043294},
+  url          = {[https://github.com/NachoPeinador/modular-projection-sieve](https://github.com/NachoPeinador/modular-projection-sieve)}
+}
+
+```
+
+**APA:**
+
+> Peinador Sala, J. I. (2026). *Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in Prime Distribution*. Zenodo. https://doi.org/10.5281/zenodo.22043294
+
+---
+
+> 🌌 **El Universo Aritmético / The Arithmetic Universe**
+> 🇪🇸 *Esta investigación forma parte del marco teórico de **El Universo Aritmético**, el cual postula que la realidad fundamental no se esconde en el caos infinito, sino en la elegante arquitectura de los números enteros.* 🔗 **[Explora el repositorio central y la teoría aquí](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
+
+```
+
+```
