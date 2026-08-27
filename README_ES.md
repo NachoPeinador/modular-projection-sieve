@@ -114,10 +114,10 @@ El artículo fundamenta la exactitud absoluta del algoritmo y la topología espe
 
 ```text
 modular-projection-sieve/
-├── 📂 Papers/                                                  # Manuscritos Académicos y Fuente LaTeX
-│   ├── 📄 Modular_Projection_Sieve_EN.pdf                      # Artículo Completo en Inglés (PDF)
-│   ├── 📄 Modular_Projection_Sieve_ES.pdf                      # Artículo Completo en Español (PDF)
-│   └── 📝 Main_Manuscript.tex                                 # Código Fuente LaTeX
+├── 📂 Papers/                                                 # Manuscritos Académicos y Fuente LaTeX
+│   ├── 📄 ATM_Projection_Sieve.pdf                            # Artículo Completo en Inglés (PDF)
+│   ├── 📄 TAC_por_Proyeccion_Modular.pdf                      # Artículo Completo en Español (PDF)
+│   └── 📝 TAC_por_Proyeccion_Modular.tex                      # Código Fuente LaTeX
 │
 ├── 📂 Notebooks/                                               # Laboratorio Maestro de Experimentos y Verificación
 │   ├── 📓 Algebraic_Theory_of_Modular_Projection_Sieving.ipynb # Cuaderno Maestro en Inglés (Python + GOE + Lean 4)
@@ -127,9 +127,9 @@ modular-projection-sieve/
 │   └── 📄 primes_audit_k100000_sample.txt                       # Muestra de Auditoría de Ejecución
 │
 ├── 📂 Images/                                                  # Figuras Generadas en Alta Resolución
-│   ├── 📊 ground_state_spectrum.png                            # Espectro del estado fundamental de primos gemelos (Δk=0)
-│   ├── 📈 asymptotic_evolution_cramer.png                      # Evolución del salto topológico y cota de Cramér
-│   └── 📉 goe_spectroscopy_staircase.png                       # Repulsión de niveles GOE y escalera espectral
+│   ├── 📊 espectro_estado_fundamental.png                      # Espectro del estado fundamental de primos gemelos (Δk=0)
+│   ├── 📈 evolucion_asintotica_cramer.png                      # Evolución del salto topológico y cota de Cramér
+│   └── 📉 espectroscopia_goe_escalera.png                      # Repulsión de niveles GOE y escalera espectral
 │
 ├── 📂 Lean/                                                    # Proyecto de Demostración Formal (Lean 4 / Mathlib)
 │   ├── 📄 lean-toolchain                                       # Versión fijada del compilador Lean 4
@@ -141,7 +141,8 @@ modular-projection-sieve/
 │
 ├── 📜 .gitignore                                               # Filtros de exclusión en Git (.pkl.gz, cachés)
 ├── 📜 LICENSE                                                  # Licencia MIT
-└── 📜 README.md                                                # Documentación Principal del Repositorio
+├── 📜 README_ES.md                                             # Documentación Principal del Repositorio en español
+└── 📜 README.md                                                # Documentación Principal del Repositorio en inglés
 
 ```
 
