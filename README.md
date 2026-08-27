@@ -79,7 +79,7 @@ The table below positions the Modular Projection Sieve within the classical time
 
 ## 🚀 Reproducibility: Interactive Computational Laboratory
 
-To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as comprehensive, all-in-one master notebook, you can execute all experiments, certify the mathematical foundations, generate the figures, and verify the claims directly in your browser:
+To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as a comprehensive, all-in-one master notebook. You can execute all experiments, certify the mathematical foundations, generate the figures, and verify the claims directly in your browser:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
 
