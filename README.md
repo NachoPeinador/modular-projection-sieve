@@ -2,13 +2,13 @@
 
 ### Sublinear Memory Prime Sieving via $\mathbb{Z}/6\mathbb{Z}$ Projection, $K_{\min}\pm$ Chiral Entanglement, and GOE Quantum Spectroscopy
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Experimental_Validation_Complete.ipynb)
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Certified_Proof-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Formal_Verification_Lean4.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Certified_Proof-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22043294.svg)](https://doi.org/10.5281/zenodo.22043294)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
-[![Paper PDF](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=flat&logo=latex&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Papers/Modular_Projection_Sieve_EN.pdf)
+[![Paper PDF](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=flat&logo=latex&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Papers/ATM_Projection_Sieve.pdf)
 
 ---
 
@@ -126,9 +126,9 @@ The paper grounds the absolute correctness of the algorithm and the spectral top
 ```text
 modular-projection-sieve/
 ├── 📂 Papers/                                                  # Academic Manuscripts & LaTeX Source
-│   ├── 📄 Modular_Projection_Sieve_EN.pdf                      # Full English Paper (PDF)
-│   ├── 📄 Modular_Projection_Sieve_ES.pdf                      # Full Spanish Paper (PDF)
-│   └── 📝 Main_Manuscript.tex                                 # LaTeX Source Code
+│   ├── 📄 ATM_Projection_Sieve.pdf                               # Full English Paper (PDF)
+│   ├── 📄 TAC_por_Proyeccion_Modular.pdf                         # Full Spanish Paper (PDF)
+│   └── 📝 ATM_Projection_Sieve.tex                               # LaTeX Source Code
 │
 ├── 📂 Notebooks/                                               # Master Experimental & Verification Lab
 │   ├── 📓 Algebraic_Theory_of_Modular_Projection_Sieving.ipynb # Full English Master Notebook (Python + GOE + Lean 4)
@@ -152,6 +152,7 @@ modular-projection-sieve/
 │
 ├── 📜 .gitignore                                               # Git ignore rules (.pkl.gz, build caches)
 ├── 📜 LICENSE                                                  # MIT License
+├── 📜 README_ES.md                                             # Main Repository Documentation spanish
 └── 📜 README.md                                                # Main Repository Documentation
 
 ```
