@@ -96,7 +96,7 @@ The notebook executes a 7-stage empirical verification pipeline directly mapped 
 * **Stage 3 — Spatial Complexity $\Theta(\sqrt{N}/\log N)$ (Theorem 5.1):** Empirical demonstration of working memory collapse ($53.1\text{ KB}$ at $N=10^9$), reproducing **Table 6.2**.
 * **Stage 4 — Temporal Complexity Scaling (Theorems 5.3 & 6.4):** Analysis of asymptotic jump ratios $O(N^{1.5}/\log N)$, validating **Table 6.3**.
 * **Stage 5 — Entangled Chiral Symmetry (Proposition 6.5):** Empirical confirmation that the channel ratio $c_1/c_5$ between $6k+1$ and $6k-1$ primes converges strictly to $1.0000$.
-* **Stage 6 — GOE Spectroscopy & Hilbert-Pólya Analogue (Section 6.7 & Theorem 4.7):** Construction and exact diagonalization of the discrete self-adjoint Hamiltonian $\mathbf{H}_N = MM^T$ (up to $10^7$ states), confirming $99.9902\%$ null-space degeneracy ($\lambda = 0$) isolating primes and GOE quantum level repulsion ($\langle r_i \rangle \approx 0.4989$, median $r_{\text{med}} \approx 0.4983$).
+* **Stage 6 — GOE Spectroscopy & Hilbert-Pólya Analogue (Section 6.7 & Theorem 4.7):** Construction and exact diagonalization of the discrete self-adjoint Hamiltonian $\mathbf{H}_N = MM^T$ (up to $10^7$ states), confirming 99.9902% null-space degeneracy ($\lambda = 0$) isolating primes and GOE quantum level repulsion ($\langle r_i \rangle \approx 0.4989$, median $r_{\text{med}} \approx 0.4983$).
 
 ---
 
