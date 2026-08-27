@@ -77,26 +77,37 @@ La siguiente tabla ubica la Criba por Proyección Modular dentro de la jerarquí
 
 ---
 
-## 🚀 Laboratorio Computacional Interactivo
+## 🚀 Reproducibilidad: Laboratorio Computacional Interactivo
 
-Para garantizar una reproducibilidad del $100\%$ bajo los estándares de Ciencia Abierta, la auditoría experimental completa y la suite de demostraciones formales se distribuyen en cuadernos interactivos listos para ejecutar en la nube:
+Para garantizar una reproducibilidad del 100% bajo los estándares de Ciencia Abierta, la auditoría empírica completa y la suite de demostraciones formales se proporcionan en un cuaderno maestro integral todo en uno. Puedes ejecutar todos los experimentos, certificar los fundamentos matemáticos, generar las figuras y verificar las afirmaciones directamente en tu navegador:
 
-### 🇬🇧 Cuaderno Maestro en Inglés (Laboratorio Completo)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)
 
-* **Cuaderno Interactivo:** [`Algebraic_Theory_of_Modular_Projection_Sieving.ipynb`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
-* **Impresión en PDF:** [`Algebraic_Theory_of_Modular_Projection_Sieving.pdf`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.pdf)
+### 🛠️ Flujo de Validación Experimental (Python / Numba)
 
-### 🇪🇸 Cuaderno Maestro en Español (Laboratorio Completo)
+El cuaderno ejecuta un flujo de verificación empírica en 7 fases mapeado directamente con los teoremas, tablas y secciones del artículo:
 
-* **Cuaderno Interactivo:** [`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.ipynb)
-* **Impresión en PDF:** [`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.pdf`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.pdf)
+* **Fase 0 — Auditoría Lógica y Exactitud Absoluta:** Implementación de referencia en Python puro verificada frente a la Criba de Eratóstenes para garantizar una tasa de error del $0.0\%$ y certificar la topología de entrelazamiento gemelo.
+* **Fase 1 — Entrelazamiento $K_{\min}\pm$ (Teoremas 3.5 y 4.10):** Implementación estricta de las fórmulas de umbral específicas por canal basadas en la teoría de coprimidad posicional (`NextKop`).
+* **Fase 2 — Exactitud en el Conteo Absoluto (Teoremas 6.2 y 6.3):** Generación del conteo exacto para la función $\pi(N)$ hasta $N=10^9$ sin falsos positivos ni negativos, validando la **Tabla 6.1**.
+* **Fase 3 — Complejidad Espacial $\Theta(\sqrt{N}/\log N)$ (Teorema 5.1):** Demostración empírica del colapso de la memoria de trabajo ($53.1\text{ KB}$ en $N=10^9$), reproduciendo la **Tabla 6.2**.
+* **Fase 4 — Escalado de Complejidad Temporal (Teoremas 5.3 y 6.4):** Análisis de las razones de salto asintótico $O(N^{1.5}/\log N)$, validando la **Tabla 6.3**.
+* **Fase 5 — Simetría Quiral Entrelazada (Proposición 6.5):** Confirmación empírica de que la razón de canales $c_1/c_5$ entre primos de la forma $6k+1$ y $6k-1$ converge estrictamente a $1.0000$.
+* **Fase 6 — Espectroscopía GOE y Análogo de Hilbert-Pólya (Sección 6.7 y Teorema 4.7):** Construcción y diagonalización exacta del Hamiltoniano autoadjunto discreto $\mathbf{H}\_N = M M^T$ (hasta $10^7$ estados), confirmando un 99.9902% de degeneración en el espacio nulo ($\lambda = 0$) que aísla los números primos y repulsión de niveles cuánticos GOE ($\langle r\_i \rangle \approx 0.4989$, mediana $r_{\text{med}} \approx 0.4983$).
 
-**Cada cuaderno integra la secuencia completa de verificación en 3 fases:**
+---
 
-1. **Demostraciones Automatizadas en Lean 4:** Despliegue de `elan`/Mathlib y certificación mecanizada (`sorry-free`) de isomorfismos posicionales, umbrales $K_{\min}\pm$, autoadjuntidad y factorización del estado fundamental de primos gemelos.
-2. **Ejecución Algorítmica y Escalado:** Código optimizado con compilación JIT (Numba) que reproduce el conteo exacto de $\pi(N)$ hasta $N=10^9$, auditoría de memoria ($53.1$ KB RSS) y convergencia de ratio quiral ($c_1/c_5 \to 1.0000$).
-3. **Espectroscopía Cuántica y RMT:** Construcción matricial de $\mathbf{H}_N = MM^T$ hasta $10^7$ estados, colapso del espacio nulo ($99.99\%$) y análisis de repulsión de niveles GOE ($\langle r \rangle \approx 0.4989$).
+### 🛡️ Módulo de Verificación Formal (Lean 4)
 
+El artículo fundamenta la exactitud absoluta del algoritmo y la topología espectral en pilares matemáticos certificados formalmente en el asistente de demostraciones **Lean 4** sin axiomas omitidos (`sorry-free`):
+
+1. **Teorema 2.1 y Lema 3.1:** Clasificación modular sobre $(\mathbb{Z}/6\mathbb{Z})^\times$ e isomorfismo de índices posicionales.
+2. **Teoremas 3.5 y 3.7:** Cálculo de umbrales y exactitud del entrelazamiento primo-coprimo.
+3. **Teorema 4.1 (Núcleo Algebraico de $\mathbb{Z}/6\mathbb{Z}$):** Involución modular e isomorfismo estricto del grupo de unidades.
+4. **Teorema 4.3:** Colapso topológico del Aniquilador Espectral.
+5. **Autoadjuntidad (Teorema Espectral):** Simetría estructural de $\mathbf{H}\_N = M M^T$, demostrando que los niveles de energía son observables estrictamente reales ($\sigma(\mathbf{H}\_N) \subset \mathbb{R}\_{\ge 0}$).
+6. **Corolario 7.2 (Estado Fundamental de Primos Gemelos):** Colisión exacta de entrelazamiento en el estado fundamental ($\Delta k = 0$), demostrando que las interacciones de primos gemelos colapsan en el índice ultra-simétrico $k = 6k_p^2$.
+   
 ---
 
 ## 📁 Estructura del Repositorio
