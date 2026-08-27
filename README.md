@@ -79,9 +79,9 @@ The table below positions the Modular Projection Sieve within the classical time
 
 ## 🚀 Interactive Computational Laboratory
 
-To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as comprehensive, all-in-one master notebooks in both English ([`Algebraic_Theory_of_Modular_Projection_Sieving.ipynb`](Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)) and Spanish ([`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb`](Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)).
+To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as comprehensive, all-in-one master notebooks in both English ([`Algebraic_Theory_of_Modular_Projection_Sieving.ipynb`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)) and Spanish ([`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.ipynb)).
 
-> **Recommended Citation:**  
+> **Recommended Citation:**
 > Peinador Sala, J. I. (2026). *Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in the Distribution of Primes*. Zenodo. [https://doi.org/10.5281/zenodo.22043294](https://doi.org/10.5281/zenodo.22043294)
 
 ---
@@ -110,6 +110,14 @@ The paper grounds the absolute correctness of the algorithm and the spectral top
 4. **Theorem 4.3:** Topological collapse of the Spectral Annihilator.
 5. **Self-Adjointness (Spectral Theorem):** Structural symmetry of $\mathbf{H}_N = MM^T$, proving energy levels are strictly real observables ($\sigma(\mathbf{H}_N) \subset \mathbb{R}_{\ge 0}$).
 6. **Corollary 7.2 (Twin Prime Ground State):** Exact collision of entanglement in the ground state ($\Delta k = 0$), proving that twin prime interactions collapse into the ultra-symmetric index $k = 6k_p^2$.
+
+---
+
+### ⚡ Execution & Hardware Environment Notes
+
+* **Colab vs. Benchmark Environment:** Reported paper execution times were benchmarked on an **AMD EPYC 7B12** processor. Cloud environments (e.g., Google Colab) may dynamically assign different CPUs (such as Intel Xeon @ 2.20 GHz), which can shift execution times by up to a factor of $4\times$.
+* **Invariance of Scientific Metrics:** This hardware variance affects CPU time exclusively and **does not alter numerical correctness, memory scaling, spectral statistics, or any empirical metric**.
+* **CPU Time Tracking:** CPU measurements utilize `time.process_time()` to capture exclusive process execution time, bypassing cloud hypervisor noise. High-speed evaluation leverages JIT compilation via `numba`.
 
 ---
 
