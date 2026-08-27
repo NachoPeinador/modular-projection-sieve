@@ -2,6 +2,7 @@
 
 ### Sublinear Memory Prime Sieving via $\mathbb{Z}/6\mathbb{Z}$ Projection, $K_{\min}\pm$ Chiral Entanglement, and GOE Quantum Spectroscopy
 
+[![Read in Spanish](https://img.shields.io/badge/Lang-Leer%20en%20Español-red?style=flat&logoColor=white&color=B31B1B)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/README_ES.md)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Certified_Proof-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
