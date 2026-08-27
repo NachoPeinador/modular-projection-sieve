@@ -121,14 +121,6 @@ The paper grounds the absolute correctness of the algorithm and the spectral top
 
 ---
 
-### ⚡ Execution & Hardware Environment Notes
-
-* **Colab vs. Benchmark Environment:** Reported paper execution times were benchmarked on an **AMD EPYC 7B12** processor. Cloud environments (e.g., Google Colab) may dynamically assign different CPUs (such as Intel Xeon @ 2.20 GHz), which can shift execution times by up to a factor of $4\times$.
-* **Invariance of Scientific Metrics:** This hardware variance affects CPU time exclusively and **does not alter numerical correctness, memory scaling, spectral statistics, or any empirical metric**.
-* **CPU Time Tracking:** CPU measurements utilize `time.process_time()` to capture exclusive process execution time, bypassing cloud hypervisor noise. High-speed evaluation leverages JIT compilation via `numba`.
-
----
-
 ## 📁 Repository Structure
 
 ```text
