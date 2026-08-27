@@ -3,7 +3,7 @@
 ### Cribado de Primos con Memoria Sublineal mediante Proyección sobre $\mathbb{Z}/6\mathbb{Z}$, Entrelazamiento Quiral $K_{\min}\pm$ y Espectroscopía Cuántica GOE
 
 [![Abrir en Colab (EN)](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)
-[![Verificación Lean 4](https://img.shields.io/badge/Lean_4-Demostración_Certificada-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
+[![Verificación Lean 4](https://img.shields.io/badge/Lean_4-Demostración_Certificada-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043294-blue.svg)](https://doi.org/10.5281/zenodo.22043294)
