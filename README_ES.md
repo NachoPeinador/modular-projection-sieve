@@ -2,6 +2,7 @@
 
 ### Cribado de Primos con Memoria Sublineal mediante Proyección sobre $\mathbb{Z}/6\mathbb{Z}$, Entrelazamiento Quiral $K_{\min}\pm$ y Espectroscopía Cuántica GOE
 
+[![Read in English](https://img.shields.io/badge/Lang-Read%20in%20English-red?style=flat&logoColor=white&color=C31B1B)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/README.md)
 [![Abrir en Colab (EN)](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)
 [![Verificación Lean 4](https://img.shields.io/badge/Lean_4-Demostración_Certificada-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
