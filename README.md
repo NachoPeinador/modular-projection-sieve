@@ -18,7 +18,7 @@
 
 * 🧩 **Modular Projection over $(\mathbb{Z}/6\mathbb{Z})^\times$:** Reframes prime numbers $p > 3$ as positional indices $k$ in dual chiral channels ($6k \pm 1$), eliminating 66.67% of the integer search space passively without memory allocation.
 * ⚛️ **Prime-Coprime Entanglement ($K_{\min}\pm$):** Reveals that prime integers in $(\mathbb{Z}/6\mathbb{Z})^\times$ form conjugated pairs that deterministically dictate composite generation thresholds. The ground state ($\Delta k = 0$) corresponds geometrically to twin prime pairs.
-* 🌌 **Discrete Quantum Chaos (GOE):** Matrix representation of the sieve operator $\mathbf{H}_N = MM^T$ exhibits a degenerate null-space ($99.99\%$ dimension collapse isolating primes) and excited level repulsion ($\langle r \rangle \approx 0.4989$) belonging to the **Gaussian Orthogonal Ensemble (GOE)**.
+* 🌌 **Discrete Quantum Chaos (GOE):** Matrix representation of the sieve operator $\mathbf{H}_N = MM^T$ exhibits a degenerate null-space (99.99% dimension collapse isolating primes) and excited level repulsion ($\langle r \rangle \approx 0.4989$) belonging to the **Gaussian Orthogonal Ensemble (GOE)**.
 
 ### ⚡ **Computational Benchmarks**
 
