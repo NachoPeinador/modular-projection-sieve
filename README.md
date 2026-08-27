@@ -108,7 +108,7 @@ The paper grounds the absolute correctness of the algorithm and the spectral top
 2. **Theorems 3.5 & 3.7:** Threshold calculation and Prime-Coprime Entanglement exactness.
 3. **Theorem 4.1 ($\mathbb{Z}/6\mathbb{Z}$ Algebraic Core):** Modular involution and strict unit group isomorphism.
 4. **Theorem 4.3:** Topological collapse of the Spectral Annihilator.
-5. **Self-Adjointness (Spectral Theorem):** Structural symmetry of $\mathbf{H}_N = MM^T$, proving energy levels are strictly real observables ($\sigma(\mathbf{H}_N) \subset \mathbb{R}_{\ge 0}$).
+5. **Self-Adjointness (Spectral Theorem):** Structural symmetry of $\mathbf{H}\_N = M M^T$, proving energy levels are strictly real observables ($\sigma(\mathbf{H}\_N) \subset \mathbb{R}\_{\ge 0}$).
 6. **Corollary 7.2 (Twin Prime Ground State):** Exact collision of entanglement in the ground state ($\Delta k = 0$), proving that twin prime interactions collapse into the ultra-symmetric index $k = 6k_p^2$.
 
 ---
