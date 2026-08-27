@@ -16,9 +16,9 @@
 
 ### 🔬 **Núcleo Teórico**
 
-* 🧩 **Proyección Modular sobre $(\mathbb{Z}/6\mathbb{Z})^\times$:** Reinterpreta los números primos $p > 3$ como índices posicionales $k$ en dos canales quirales ($6k \pm 1$), eliminando de forma pasiva el $66.67\%$ del espacio de búsqueda entero sin asignación de memoria.
+* 🧩 **Proyección Modular sobre $(\mathbb{Z}/6\mathbb{Z})^\times$:** Reinterpreta los números primos $p > 3$ como índices posicionales $k$ en dos canales quirales ($6k \pm 1$), eliminando de forma pasiva el 66.67% del espacio de búsqueda entero sin asignación de memoria.
 * ⚛️ **Entrelazamiento Primo-Coprimo ($K_{\min}\pm$):** Revela que los enteros primos en $(\mathbb{Z}/6\mathbb{Z})^\times$ forman pares conjugados que determinan de manera determinista los umbrales de generación de compuestos. El estado fundamental ($\Delta k = 0$) corresponde geométricamente a pares de primos gemelos.
-* 🌌 **Caos Cuántico Discreto (GOE):** La representación matricial del operador de criba $\mathbf{H}_N = MM^T$ exhibe un espacio nulo degenerado (colapso dimensional del $99.99\%$ que aísla los primos) y repulsión de niveles excitados ($\langle r \rangle \approx 0.4989$) perteneciente al **Ensamble Ortogonal Gaussiano (GOE)**.
+* 🌌 **Caos Cuántico Discreto (GOE):** La representación matricial del operador de criba $\mathbf{H}_N = MM^T$ exhibe un espacio nulo degenerado (colapso dimensional del 99.99% que aísla los primos) y repulsión de niveles excitados ($\langle r \rangle \approx 0.4989$) perteneciente al **Ensamble Ortogonal Gaussiano (GOE)**.
 
 ### ⚡ **Marcas de Rendimiento Computacional**
 
