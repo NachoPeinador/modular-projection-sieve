@@ -77,14 +77,10 @@ The table below positions the Modular Projection Sieve within the classical time
 
 ---
 
-## 🚀 Interactive Computational Laboratory
+## 🚀 Reproducibility: Interactive Computational Laboratory
 
-To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as comprehensive, all-in-one master notebooks in both English ([`Algebraic_Theory_of_Modular_Projection_Sieving.ipynb`](https://www.google.com/search?q=Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)) and Spanish ([`Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb`](https://www.google.com/search?q=Notebooks/Teor%C3%ADa_Algebraica_de_Cribado_por_Proyecci%C3%B3n_Modular.ipynb)).
-
-> **Recommended Citation:**
-> Peinador Sala, J. I. (2026). *Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in the Distribution of Primes*. Zenodo. [https://doi.org/10.5281/zenodo.22043294](https://doi.org/10.5281/zenodo.22043294)
-
----
+To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as comprehensive, all-in-one master notebook, you can execute all experiments, certify the mathematical foundations, generate the paper's figures, and verify the statistical claims directly in your browser.:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
 
 ### 🛠️ Experimental Validation Pipeline (Python / Numba)
 
