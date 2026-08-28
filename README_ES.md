@@ -195,7 +195,3 @@ Este proyecto fue concebido y desarrollado íntegramente fuera del ecosistema ac
 
 > 🌌 **El Universo Aritmético / The Arithmetic Universe**
 > 🇪🇸 *Esta investigación forma parte del marco teórico de **El Universo Aritmético**, el cual postula que la realidad fundamental no se esconde en el caos infinito, sino en la elegante arquitectura de los números enteros.* 🔗 **[Explora el repositorio central y la teoría aquí](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
-
-```
-
-```
