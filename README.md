@@ -206,15 +206,3 @@ This project was conceived and developed entirely outside traditional academic i
 
 > 🌌 **The Arithmetic Universe / El Universo Aritmético**
 > 🇬🇧 *This research is part of the theoretical framework of **The Arithmetic Universe**, which postulates that fundamental reality is not hidden in infinite chaos, but in the elegant architecture of integers.* 🔗 **[Explore the central hub & theory here](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
-
-```
-
-***
-
-### 💡 Consejos de entorno GitHub que marcarán la diferencia:
-
-1. **Subir los PDFs compilados:** Guarda las versiones compiladas de los artículos en la carpeta `Papers/` (`Modular_Projection_Sieve_EN.pdf` y `Modular_Projection_Sieve_ES.pdf`). Los visitantes de GitHub valoran mucho poder abrir el PDF directamente en el navegador.
-2. **Archivos de Lean 4:** Coloca los archivos nativos de Lean en una carpeta `Lean/` (`lakefile.lean` y `ModularSieve.lean`). Así, cualquier desarrollador de Lean podrá clonar el repo y ejecutar `lake build` en su máquina local.
-3. **Sección "Social Preview" de GitHub:** En los ajustes de tu repositorio (*Settings -> General -> Social preview*), puedes subir una imagen del diagrama de la arquitectura o del gráfico de la matriz de criba. Esto hará que cuando compartas el enlace en redes (como X/Twitter o LinkedIn) aparezca una tarjeta visual impactante.
-
-```
