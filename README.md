@@ -204,5 +204,9 @@ This project was conceived and developed entirely outside traditional academic i
 
 ---
 
+**Last Update:** August 2026 | **Status:** Under Review at SEMA Journal (ID: `SEMJ-D-26-00238`) | **Built with:** ⚛️, 🐍 & ⊢
+
+---
+
 > 🌌 **The Arithmetic Universe / El Universo Aritmético**
 > 🇬🇧 *This research is part of the theoretical framework of **The Arithmetic Universe**, which postulates that fundamental reality is not hidden in infinite chaos, but in the elegant architecture of integers.* 🔗 **[Explore the central hub & theory here](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
