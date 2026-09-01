@@ -60,7 +60,7 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
 *   A) El compuesto $p \times 5$, ya que los múltiplos de 2 y 3 han sido eliminados por la base modular.
 *   B) El cuadrado $p^2$, puesto que todos los compuestos múltiplos de $p$ menores que su cuadrado ya fueron descubiertos y aniquilados por primos base menores en etapas previas.
 *   C) El producto cruzado $p \times \mathrm{Cop}(p)$, ya que marca la activación asimétrica en la red.
-*   D) El primorial $p_k\#$, que acota el período asintótico del retículo de evasión.
+*   D) El primorial $p_k\\#$, que acota el período asintótico del retículo de evasión.
 
 **7. En la Teoría del Entrelazamiento, se define formalmente el concepto de "Coprimo Posicional" o $\mathrm{Cop}(p)$ para un primo base $p = 6k_p \pm 1$. ¿Cuál es su definición matemática exacta?**
 *   A) Es el número primo que se sitúa a una distancia máxima de $p$ sobre el mismo canal.
