@@ -356,14 +356,11 @@ Evaluamos cada variable para las dos transiciones primoriales en competencia:
 *   **Análisis Comparativo**:
     La transición primorial $2 \to 6$ arroja un ROI de $\approx 0.105155$, mientras que la transición $6 \to 30$ decae drásticamente a $\approx 0.001794$. Calculando el ratio de eficiencia informacional:
 
-    Ratio = $$\frac{\mathrm{ROI}_{2 \to 6}}{\mathrm{ROI}_{6 \to 30}} = \frac{0.105155}{0.001794} \approx 58.6$$
-    
+    $$\text{Ratio} = \frac{\mathrm{ROI}_{2 \to 6}}{\mathrm{ROI}_{6 \to 30}} = \frac{0.105155}{0.001794} \approx 58.6$$
 
-  La transición $2 \to 6$ (módulo 6) es más de **58 veces** más eficiente informacionalmente que escalar al módulo 30.
-
-  *(Nota: Si se evalúa usando la aproximación simplificada descrita en secciones del artículo, la razón de cambio asume un factor de $3.52$ veces, pero en ambos casos se demuestra analíticamente que la transición hacia el módulo 30 representa un desplome rotundo de rendimiento).*
-
-  Esto demuestra de forma rigurosa que el anillo cociente $\mathbb{Z}/6\mathbb{Z}$ es el único punto crítico de Pareto que minimiza la entropía de decisión en el espacio de estados de la criba, consolidando la optimalidad absoluta del módulo 6.
+    La transición $2 \to 6$ (módulo 6) es más de **58 veces** más eficiente informacionalmente que escalar al módulo 30.
+    *(Nota: Si se evalúa usando la aproximación simplificada descrita en secciones del artículo, la razón de cambio asume un factor de $3.52$ veces, pero en ambos casos se demuestra analíticamente que la transición hacia el módulo 30 representa un desplome rotundo de rendimiento).*
+    Esto demuestra de forma rigurosa que el anillo cociente $\mathbb{Z}/6\mathbb{Z}$ es el único punto crítico de Pareto que minimiza la entropía de decisión en el espacio de estados de la criba, consolidando la optimalidad absoluta del módulo 6.
 
 ---
 
