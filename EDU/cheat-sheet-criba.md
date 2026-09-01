@@ -137,12 +137,12 @@ uint64_t criba_proyeccion_modular(uint64_t k_max) {
 }
 ```
 
-*Nota: La función `encontrar_nextkop` busca de forma lineal o por búsqueda binaria el menor índice $k_q \ge k$ tal que $6k_q \mp 1$ es primo. Debido a la alta densidad local ($\Delta k = 0$ en el $21.69\%$ de los casos), la búsqueda secuencial encuentra el NextKop en promedio en menos de 2 iteraciones.*
+*Nota:* La función `encontrar_nextkop` busca de forma lineal o por búsqueda binaria el menor índice $k\_q \ge k$ tal que $6k\_q \mp 1$ es primo. Debido a la alta densidad local ($\Delta k = 0$ en el $21.69\%$ de los casos), la búsqueda secuencial encuentra el NextKop en promedio en menos de 2 iteraciones.
 
 ---
 
 ### 6. Trucos de Optimización (Hardware, IoT & Embedded)
 1.  **Filtro por 5 determinista en $O(1)$:** El módulo estático por 10 sobre $k$ se calcula de forma extremadamente rápida utilizando multiplicaciones recíprocas (sin divisiones binarias reales) para descartar el $20\%$ de candidatos.
-2.  **Inserción Topológica en $O(1)$:** Los primos base se anexan directamente al final del vector `base`. Como sus valores aumentan monótonamente, el orden jerárquico de sus cuadrados y umbrales $K_{\min}^+$ queda ordenado de manera natural, prescindiendo por completo de algoritmos de ordenación.
+2.  **Inserción Topológica en $O(1)$:** Los primos base se anexan directamente al final del vector `base`. Como sus valores aumentan monótonamente, el orden jerárquico de sus cuadrados y umbrales $K\_{\min}^+$ queda ordenado de manera natural, prescindiendo por completo de algoritmos de ordenación.
 3.  **Localidad de Caché y Acceso Monótono:** Ordenar los generadores asegura que las lecturas en memoria RAM sigan un patrón lineal, permitiendo predecir perfectamente los accesos en el prefetcher de hardware de la CPU.
 4.  **Corte Temprano:** La estructura condicional `k < gen.kmin` actúa como un interruptor quiral ultrarrápido que detiene la comprobación de divisores innecesarios en etapas tempranas.
