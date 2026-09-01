@@ -295,19 +295,29 @@ Dado que la proyección $\Pi(6k+\varepsilon) = (k, \varepsilon)$ es biyectiva so
 #### Problema 3: Demostración Formal de la Complejidad de Memoria Sublineal y el Trilema Algorítmico
 
 ##### 1. Demostración de Complejidad de Memoria de Trabajo
-La memoria de trabajo de la criba por proyección modular está dictada en su totalidad por la lista estática que almacena las tuplas de información de los primos base generadores activos $\mathcal{P}_{\text{info}} = (p, k_p, K_{\min}^+, K_{\min}^-)$ que cumplen la cota clásica $p \le \sqrt{N_{\max}}$.
+La memoria de trabajo de la criba por proyección modular está dictada en su totalidad por la lista estática que almacena las tuplas de información de los primos base generadores activos $\mathcal{P}\_{\text{info}} = (p, k\_p, K\_{\min}^+, K\_{\min}^-)$ que cumplen la cota clásica $p \le \sqrt{N\_{\max}}$.
+
 Sea $N$ el límite superior a cribar, el límite de primos base activos es $\sqrt{N}$. De acuerdo con el Teorema de los Números Primos (PNT), el número acumulado de primos menores o iguales que un valor dado $x$ tiene el siguiente comportamiento asintótico para $x \to \infty$:
+
 $$\pi(x) \sim \frac{x}{\ln x}$$
+
 Sustituyendo $x = \sqrt{N}$:
+
 $$\pi(\sqrt{N}) \sim \frac{\sqrt{N}}{\ln(\sqrt{N})} = \frac{2 \sqrt{N}}{\ln N}$$
+
 Cada tupla de primo base almacena exactamente 4 enteros de 32 bits ($4 \times 4 = 16$ bytes por registro), de modo que la capacidad en memoria de trabajo en bytes (RSS) escala asintóticamente como:
+
 $$M(N) = 16 \cdot \pi(\sqrt{N}) \sim 16 \cdot \left( \frac{2 \sqrt{N}}{\ln N} \right) = \frac{32 \sqrt{N}}{\ln N} \text{ bytes}$$
+
 En consecuencia:
+
 $$M(N) = \Theta\left(\frac{\sqrt{N}}{\log N}\right) = o(\sqrt{N})$$
+
 Esta sublinealidad estricta explica por qué el algoritmo requiere tan solo $2.1$ KB para $N = 6 \cdot 10^5$, $15.3$ KB para $N = 6 \cdot 10^7$ y apenas $53.1$ KB de RAM de trabajo para cribar números hasta $N = 10^9$.
 
 ##### 2. Análisis del Trilema Algorítmico
-El trilema de los algoritmos de criba de primos balances tres variables fundamentales:
+El trilema de los algoritmos de criba de primos balancea tres variables fundamentales:
+
 1.  **Baja Memoria**: Reducir el espacio de almacenamiento estático y dinámico.
 2.  **Alta Velocidad**: Minimizar el número de operaciones de CPU ($O(N \log \log N)$ de Eratóstenes).
 3.  **Simetría y Hardware**: Simplificar el diseño lógico de inserción de datos para que sea realizable en silicio directo.
