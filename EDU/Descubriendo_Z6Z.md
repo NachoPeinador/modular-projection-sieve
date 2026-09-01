@@ -151,11 +151,19 @@ Esto demuestra que el aparente caos de los números primos no se debe a su natur
 
 ## 🎨 Representación Visual del Sistema
 
-Para ayudarte a asimilar estos conceptos, te recomendamos examinar la ilustración conceptual `carriles_modular_sieve.png` disponible en tu panel de Studio. En ella verás reflejada de forma artística esta misma estructura matemática:
+Para ayudarte a asimilar estos conceptos, puedes examinar la ilustración conceptual del **Anillo Modular ($\mathbb{Z}/6\mathbb{Z}$)**:
 
-* **Los Dos Carriles Paralelos:** El canal morado ($\mathcal{C}\_5$ o carril izquierdo, de polaridad $-1$) y el canal azul ($\mathcal{C}\_1$ o carril derecho, de polaridad $+1$).
-* **El Filtro de Entrada:** Un prisma geométrico central que actúa como el módulo 6, desviando pasivamente y descartando a todos los múltiplos de 2 y 3 (canales compuestos y de anclaje) para que no interfieran en los cálculos.
-* **Los Puntos de Impacto Coherentes:** Representados como destellos brillantes que marcan los umbrales de colisión posicional calculados de forma determinista mediante la regla de los signos, revelando la evasión topológica que da origen a la emergencia de los números primos libres.
+![Estructura del Anillo Modular Z/6Z](https://raw.githubusercontent.com/NachoPeinador/modular-projection-sieve/main/Images/carriles_modular_sieve.jpg)
+
+En esta representación tridimensional del sistema verás reflejada fielmente la estructura matemática descrita:
+
+* **El Anillo Modular Cilíndrico (`MODULAR RING ℤ/6ℤ`):** La estructura circular dividida en los 6 compartimentos de las clases de residuos módulo 6.
+* **Los Dos Canales de Alta Energía ($1$ y $5$):** 
+  * **Canal $5$ ($\mathcal{C}_5$, Izquierda):** Módulo terminal iluminado en rosa/magenta brillante, marcado con la esfera de activación del umbral local $K_{\min}^+$.
+  * **Canal $1$ ($\mathcal{C}_1$, Derecha):** Módulo terminal iluminado en azul/cian brillante, marcado con la esfera de activación del umbral cruzado $K_{\min}^-$.
+* **El Ancla Central de Baja Entropía ($0$):** El panel frontal dorado/naranja que resalta el residuo $0$ ($6k$), actuando como el estabilizador simétrico del sistema.
+* **Canales Pasivos y Secundarios ($2$, $3$ y $4$):** Representados en tono tenue en el fondo del cilindro, descartados de la búsqueda por corresponder a números pares o múltiplos de 3.
+* **Lazos de Entrelazamiento Quiral (Trenza Infinita):** La doble cinta de energía fotónica (azul y magenta) que gira en forma de infinito rodeando el cilindro, conectando topológicamente los canales $1$ y $5$ a través de sus umbrales $K_{\min}^\pm$.
 
 ## 🏫 ¡A la Pizarra! Dos Ejemplos Prácticos Paso a Paso (25 y 35)
 
