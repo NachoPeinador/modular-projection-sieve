@@ -370,26 +370,44 @@ Evaluamos cada variable para las dos transiciones primoriales en competencia:
 **Demostración**:
 En la Teoría de Proyección Modular, un índice espacial $k$ genera un par de primos gemelos $(6k-1, 6k+1)$ si y solo si evade simultáneamente la aniquilación en ambos canales modulares.
 De acuerdo con el Lema de Equivalencia Modular (Lema 3.1), para cada primo base $p \le \sqrt{6k+1}$:
-*   El canal negativo $6k-1$ es compuesto si $k \equiv -k_p \pmod p$ (para $p \in \mathcal{C}_1$) o $k \equiv k_p \pmod p$ (para $p \in \mathcal{C}_5$).
-*   El canal positivo $6k+1$ es compuesto si $k \equiv k_p \pmod p$ (para $p \in \mathcal{C}_1$) o $k \equiv -k_p \pmod p$ (para $p \in \mathcal{C}_5$).
+*   El canal negativo $6k-1$ es compuesto si $k \equiv -k\_p \pmod p$ (para $p \in \mathcal{C}\_1$) o $k \equiv k\_p \pmod p$ (para $p \in \mathcal{C}\_5$).
+*   El canal positivo $6k+1$ es compuesto si $k \equiv k\_p \pmod p$ (para $p \in \mathcal{C}\_1$) o $k \equiv -k\_p \pmod p$ (para $p \in \mathcal{C}\_5$).
 
 Para que ambos canales sobrevivan concurrentemente (generando un par de primos gemelos en el índice $k$), el índice posicional debe evadir ambas congruencias para todo primo base $p > 3$. Esto se expresa como el sistema de inecuaciones:
+
 $$k \not\equiv k_p \pmod p \quad \text{and} \quad k \not\equiv -k_p \pmod p$$
+
 Multiplicando ambas clases excluibles:
+
 $$(k - k_p)(k + k_p) = k^2 - k_p^2 \not\equiv 0 \pmod p \quad \forall p \le \sqrt{6k+1}$$
-Este es el **aniquilador cuadrático de entrelazamiento**. Puesto que $p > 3$, las dos clases de residuos $k_p$ y $-k_p$ son distintas en el cuerpo de restos modulo $p$. De las $p$ clases posibles para $k$, exactamente $2$ de ellas resultan en la aniquilación de al menos uno de los canales.
+
+Este es el **aniquilador cuadrático de entrelazamiento**. Puesto que $p > 3$, las dos clases de residuos $k\_p$ y $-k\_p$ son distintas en el cuerpo de restos modulo $p$. De las $p$ clases posibles para $k$, exactamente $2$ de ellas resultan en la aniquilación de al menos uno de los canales.
 Por lo tanto, la probabilidad topológica de que un índice $k$ sobreviva a la colisión del primo base $p$ es:
+
 $$P_{\text{real}}(p) = \frac{p - 2}{p}$$
+
 Si los canales modulares fuesen estadísticamente independientes, la probabilidad de supervivencia transversal coincidiría con el cuadrado de la probabilidad de supervivencia individual:
+
 $$P_{\text{indep}}(p) = \left( \frac{p - 1}{p} \right)^2$$
+
 El factor de correlación o sesgo de densidad topológica $f(p)$ que mide el entrelazamiento de canales es:
+
 $$f(p) = \frac{P_{\text{real}}(p)}{P_{\text{indep}}(p)} = \frac{\frac{p-2}{p}}{\frac{(p-1)^2}{p^2}} = \frac{p(p-2)}{(p-1)^2} = 1 - \frac{1}{(p-1)^2}$$
+
 De acuerdo con el Teorema Chino del Resto, las progresiones modulares para primos distintos son mutuamente independientes en sus períodos. El producto de las probabilidades corregidas para todos los primos base activos del sistema ($p \ge 5$, ya que los factores 2 y 3 han sido extraídos por el módulo 6) es:
+
 $$\Pi_{\text{survival}} = \prod_{p \ge 5} \left( 1 - \frac{1}{(p-1)^2} \right)$$
+
 Recordando que la constante de primos gemelos de Hardy-Littlewood ($C_2$) se define sobre todos los primos $p \ge 3$ como:
+
 $$C_2 = \prod_{p \ge 3} \left( 1 - \frac{1}{(p-1)^2} \right) = \left( 1 - \frac{1}{(3-1)^2} \right) \cdot \prod_{p \ge 5} \left( 1 - \frac{1}{(p-1)^2} \right)$$
+
 Dado que para $p = 3$:
+
 $$1 - \frac{1}{(3-1)^2} = 1 - \frac{1}{4} = \frac{3}{4}$$
+
 Sustituyendo y despejando:
+
 $$C_2 = \frac{3}{4} \prod_{p \ge 5} \left( 1 - \frac{1}{(p-1)^2} \right) \implies \prod_{p \ge 5} \left( 1 - \frac{1}{(p-1)^2} \right) = \frac{4}{3} C_2$$
+
 Esta elegante relación analítica demuestra de forma rigurosa la convergencia e idéntico comportamiento asintótico entre el entrelazamiento quiral y la constante de Hardy-Littlewood, fundamentando la densidad de primos gemelos como el estado de vacío cuántico de la red.
