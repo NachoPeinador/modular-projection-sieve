@@ -74,6 +74,12 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
 *   C) $K_{\min}^- = p \cdot \mathrm{NextKop}(p) - k_p$
 *   D) $K_{\min}^- = 6k_p^2$
 
+**8.** Si un número primo base pertenece al canal negativo, es decir, $p \in \mathcal{C}\_5$ con $p = 6k\_p - 1$, ¿cuál es la fórmula algebraica que determina su umbral de activación cruzado $K\_{\min}^-$ para el canal positivo?
+*   A) $K\_{\min}^- = p \cdot k\_p - k\_p$
+*   B) $K\_{\min}^- = p \cdot \mathrm{NextKop}(p) + k\_p$
+*   C) $K\_{\min}^- = p \cdot \mathrm{NextKop}(p) - k\_p$
+*   D) $K\_{\min}^- = 6k\_p^2$
+
 **9. ¿A qué se refiere el término "Distancia Hueca" ($\Delta K = |K_{\min}^- - K_{\min}^+|$) en la topología de la red de criba por proyección modular?**
 *   A) A la brecha espacial existente entre dos números primos consecutivos de la forma $p_{n+1} - p_n$.
 *   B) Al número de compuestos triviales que caen en las clases de residuos $0, 2, 3$ y $4 \pmod 6$.
