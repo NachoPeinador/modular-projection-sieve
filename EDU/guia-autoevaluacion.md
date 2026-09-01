@@ -244,38 +244,51 @@ Dado que la proyección $\Pi(6k+\varepsilon) = (k, \varepsilon)$ es biyectiva so
 
 ---
 
-#### Problema 2: Cálculo Analítico y Topológico de Umbrales $K_{\min}^\pm$ para $p=11$
+#### Problema 2: Cálculo Analítico y Topológico de Umbrales $K\_{\min}^\pm$ para $p=11$
 **Solución**:
 *   **Paso 1: Extracción de parámetros de $p=11$**
-    El primo base $p = 11$ satisface la congruencia $11 \equiv 5 \pmod 6$, por lo que pertenece al canal negativo $\mathcal{C}_5$, lo que implica una polaridad $\varepsilon_p = -1$.
+    El primo base $p = 11$ satisface la congruencia $11 \equiv 5 \pmod 6$, por lo que pertenece al canal negativo $\mathcal{C}\_5$, lo que implica una polaridad $\varepsilon\_p = -1$.
     Su índice posicional se calcula mediante:
-    $$k_p = \frac{p + 1}{6} = \frac{11 + 1}{6} = 2$$
 
-*   **Paso 2: Cálculo del Umbral Local ($K_{\min}^+$)**
-    El primer impacto del primo $p$ en su canal de cuadratura (canal positivo $\mathcal{C}_1$, ya que $p^2 \equiv 1 \pmod 6$) viene dado por la fórmula del umbral cuadrático:
-    $$K_{\min}^+(p) = p \cdot k_p - k_p \quad (\text{para } p \in \mathcal{C}_5)$$
+    $$k\_p = \frac{p + 1}{6} = \frac{11 + 1}{6} = 2$$
+
+*   **Paso 2: Cálculo del Umbral Local ($K\_{\min}^+$)**
+    El primer impacto del primo $p$ en su canal de cuadratura (canal positivo $\mathcal{C}\_1$, ya que $p^2 \equiv 1 \pmod 6$) viene dado por la fórmula del umbral cuadrático:
+
+    $$K\_{\min}^+(p) = p \cdot k\_p - k\_p \quad (\text{para } p \in \mathcal{C}\_5)$$
+
     Sustituyendo los valores:
-    $$K_{\min}^+(11) = 11 \cdot 2 - 2 = 20$$
+
+    $$K\_{\min}^+(11) = 11 \cdot 2 - 2 = 20$$
+
     *Verificación*: El entero correspondiente en la red es $6 \cdot (20) + 1 = 121$, que equivale exactamente a $11^2$.
 
 *   **Paso 3: Búsqueda del Coprimo Posicional y su índice ($\mathrm{NextKop}$)**
-    Para hallar el umbral en el canal cruzado opuesto $\mathcal{C}_5$, buscamos el menor primo $q$ que resida en el canal positivo $\mathcal{C}_1$ ($q = 6k_q + 1$) con un índice $k_q \ge k_p = 2$.
+    Para hallar el umbral en el canal cruzado opuesto $\mathcal{C}\_5$, buscamos el menor primo $q$ que resida en el canal positivo $\mathcal{C}\_1$ ($q = 6k\_q + 1$) con un índice $k\_q \ge k\_p = 2$.
     Evaluamos los índices de forma secuencial:
     *   Para $k = 2$: $q = 6(2) + 1 = 13$, que es primo.
+
     Por lo tanto, el coprimo posicional es $\mathrm{Cop}(11) = 13$ y su índice posicional asociado es:
+
     $$\mathrm{NextKop}(11) = 2$$
 
-*   **Paso 4: Cálculo del Umbral Cruzado ($K_{\min}^-$)**
-    Aplicamos la fórmula del entrelazamiento cruzado para primos en $\mathcal{C}_5$:
-    $$K_{\min}^-(p) = p \cdot \mathrm{NextKop}(p) + k_p$$
+*   **Paso 4: Cálculo del Umbral Cruzado ($K\_{\min}^-$)**
+    Aplicamos la fórmula del entrelazamiento cruzado para primos en $\mathcal{C}\_5$:
+
+    $$K\_{\min}^-(p) = p \cdot \mathrm{NextKop}(p) + k\_p$$
+
     Sustituyendo los valores:
-    $$K_{\min}^-(11) = 11 \cdot 2 + 2 = 24$$
+
+    $$K\_{\min}^-(11) = 11 \cdot 2 + 2 = 24$$
+
     *Verificación*: El entero correspondiente en la red es $6 \cdot (24) - 1 = 143$, que equivale exactamente al producto cruzado de entrelazamiento $11 \times 13$.
 
 *   **Paso 5: Evaluación de la Distancia Hueca**
     La asimetría topológica del entrelazamiento se refleja en la "distancia hueca":
-    $$\Delta K = K_{\min}^- - K_{\min}^+ = 24 - 20 = 4 \text{ índices posicionales}$$
-    En el rango de índices posicionales $k \in [20, 23]$, el primo base $11$ solo registra impactos en el canal positivo $\mathcal{C}_1$ (en $k = 20$, compuesto $121$). En el canal negativo $\mathcal{C}_5$, es matemáticamente imposible que ocurran colisiones divisibles por $11$ en ese rango. Una criba clásica con límite global de raíz cuadrada evaluaría el canal opuesto desde el índice 20. El uso de los umbrales asimétricos e independientes $K_{\min}^\pm$ omite estas evaluaciones redundantes, logrando un ahorro directo de 4 iteraciones del bucle interno en dicho canal.
+
+    $$\Delta K = K\_{\min}^- - K\_{\min}^+ = 24 - 20 = 4 \text{ índices posicionales}$$
+
+    En el rango de índices posicionales $k \in [20, 23]$, el primo base $11$ solo registra impactos en el canal positivo $\mathcal{C}\_1$ (en $k = 20$, compuesto $121$). En el canal negativo $\mathcal{C}\_5$, es matemáticamente imposible que ocurran colisiones divisibles por $11$ en ese rango. Una criba clásica con límite global de raíz cuadrada evaluaría el canal opuesto desde el índice 20. El uso de los umbrales asimétricos e independientes $K\_{\min}^\pm$ omite estas evaluaciones redundantes, logrando un ahorro directo de 4 iteraciones del bucle interno en dicho canal.
 
 ---
 
