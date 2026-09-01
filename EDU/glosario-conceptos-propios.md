@@ -78,7 +78,7 @@ Sustentado formalmente por el **Teorema 4.3 (Isomorfismo I)**. En Lean 4, este n
 
 ---
 
-### 3. Coprimo Posicional (NextKop / $\mathrm{Cop}(p)$)
+### 3. Coprimo Posicional (NextKop / Cop(p))
 
 #### Definición Accesible
 Para un número primo base dado en una "autopista" modular, su **Coprimo Posicional** representa la "pareja" de menor tamaño ubicada en la autopista opuesta (canal alternante). Este emparejamiento es el eslabón fundamental que permite calcular matemáticamente dónde ocurrirá la primera colisión compuesta cruzada entre canales sin tener que buscar a ciegas en la recta numérica.
