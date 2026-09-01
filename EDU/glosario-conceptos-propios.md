@@ -140,7 +140,7 @@ Asociada al **Teorema 4.4** (Condición de Supervivencia y Constante $C_2$). En 
 ### 5. Distancia Hueca (Hollow Distance / $\Delta K$)
 
 #### Definición Accesible
-La **Distancia Hueca** es una "zona muerta" de inmunidad total ubicada en el canal negativo ($\mathcal{C}_5$). Representa una brecha de seguridad espacial entre el primer múltiplo que un primo genera en su propio canal (su cuadrado $p^2$, en el canal positivo $\mathcal{C}_1$) y su primer múltiplo cruzado en el canal opuesto ($p \cdot \mathrm{Cop}(p)$). En esta zona es matemáticamente imposible que el primo genere múltiplos, lo que ahorra valiosos ciclos de procesamiento en CPUs de alto rendimiento al evitar búsquedas inútiles en dicha área.
+La **Distancia Hueca** es una "zona muerta" de inmunidad total ubicada en el canal negativo ($\mathcal{C}_5$). Representa una brecha de seguridad espacial entre el primer múltiplo que un primo genera en su propio canal (su cuadrado $p^2$, en el canal positivo $\mathcal{C}_1$) y su primer múltiplo cruzado en el canal opuesto $p \cdot \mathrm{Cop}(p)$. En esta zona es matemáticamente imposible que el primo genere múltiplos, lo que ahorra valiosos ciclos de procesamiento en CPUs de alto rendimiento al evitar búsquedas inútiles en dicha área.
 
 #### Definición Rigurosa y Formulada
 Para cada primo base $p = 6k_p \pm 1$ se calculan analíticamente dos umbrales mínimos de activación asimétricos e independientes, denotados como $\mathrm{Kmin}^\pm(p)$:
