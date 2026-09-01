@@ -136,9 +136,11 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
     2.  Analice la naturaleza del "Trilema Computacional del Cribado" (Baja Memoria, Alta Velocidad y Simetría para Hardware) y evalúe cómo el algoritmo de proyección modular optimiza este balance en comparación con la Criba de Eratóstenes tradicional.
 
 ### Problema 4: Análisis Termodinámico del ROI Informacional de Transición Primorial
-*   **Consigna**: Se define el Retorno de Inversión Informacional Normalizado ($\mathrm{ROI}_{k-1 \to k}$) de una transición de fase primorial de criba como:
-    $$\mathrm{ROI}_{k-1 \to k} = \frac{1}{P_k} \frac{\rho_k^{-1} - \rho_{k-1}^{-1}}{(C_k - C_{k-1}) \log_2 p_k}$$
-    donde $P_k$ es el primorial de base, $\rho_k = \phi(P_k)/P_k$ es la densidad de supervivencia, y $C_k = \phi(P_k)$ es el número de canales activos concurrentes. Demuestre formalmente que la transición primorial de fase $2 \to 6$ (módulo 6, primo añadido $p_2 = 3$) maximiza este retorno de inversión informática respecto a la transición subsecuente $6 \to 30$ (primo añadido $p_3 = 5$), probando de forma rigurosa la optimalidad de Pareto del módulo 6.
+*   **Consigna**: Se define el Retorno de Inversión Informacional Normalizado ($\mathrm{ROI}\_{k-1 \to k}$) de una transición de fase primorial de criba como:
+
+    $$\mathrm{ROI}\_{k-1 \to k} = \frac{1}{P\_k} \frac{\rho\_k^{-1} - \rho\_{k-1}^{-1}}{(C\_k - C\_{k-1}) \log\_2 p\_k}$$
+
+    donde $P\_k$ es el primorial de base, $\rho\_k = \phi(P\_k)/P\_k$ es la densidad de supervivencia, y $C\_k = \phi(P\_k)$ es el número de canales activos concurrentes. Demuestre formalmente que la transición primorial de fase $2 \to 6$ (módulo 6, primo añadido $p\_2 = 3$) maximiza este retorno de inversión informática respecto a la transición subsecuente $6 \to 30$ (primo añadido $p\_3 = 5$), probando de forma rigurosa la optimalidad de Pareto del módulo 6.
 
 ### Problema 5: Derivación Analítica de la Constante de Hardy-Littlewood para Primos Gemelos
 *   **Consigna**: Demuestre formalmente cómo la Conjetura de los Primos Gemelos emerge geométricamente como el estado fundamental de mínima energía de entrelazamiento ($\Delta k = 0$) en la red modular. A partir de la inecuación del aniquilador espectral cuadrático en el espacio posicional:
