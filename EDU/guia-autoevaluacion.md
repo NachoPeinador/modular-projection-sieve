@@ -42,7 +42,7 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
 
 **4. El Isomorfismo III (Representacional-Espectral) define el operador de criba discreto autoadjunto mediante el producto simétrico $\mathbf{H}_N = MM^T$. Bajo esta formulación cuántica discreta, ¿qué representan los estados fundamentales del sistema con autovalor $\lambda = 0$?**
 *   A) Números compuestos que tienen una energía de ligadura nula.
-*   B) Números primos en $\mathbb{N}$ (para $N > 3$), los cuales pertenecen al espacio nulo degenerado (núcleo o $\ker(\mathbf{H}_N)$) del operador al evadir todas las líneas de aniquilación.
+*   B) Números primos en $\mathbb{N}$ (para $N > 3$), los cuales pertenecen al espacio nulo degenerado núcleo o $\ker(\mathbf{H}_N)$ del operador al evadir todas las líneas de aniquilación.
 *   C) Los primos base generadores $p \le \sqrt{N}$ que están activos en la memoria del sistema.
 *   D) Estados inestables excitados que colapsan por acción del operador de desplazamiento $T_p$.
 
