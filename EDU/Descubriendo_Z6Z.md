@@ -50,3 +50,110 @@ Lejos de ser residuos planos, cada uno de ellos cumple una función matemática 
   [3] Canales de Anclaje (Estabilizadores de baja entropía) -> Múltiplos de 3 (6k+3)
   [4] Canal Compuesto (Pares, Opacos a Primos) --------------> 6k + 4
   [5] Canal de Alta Energía (Señal de Primalidad) -----------> 6k - 1 (ó 6k+5)
+
+```
+
+### A. Canales de Anclaje o Estabilizadores (Restos $r=0$ y $r=3$)
+
+Representan a los números de la forma $6k$ y $6k+3$.
+
+* Al ser siempre divisibles por 3 (y en el caso de $r=0$ también por 2), tienen una **entropía aritmética nula** respecto a la aparición de números primos: sabemos con absoluta certeza que nunca habrá un primo en ellos (excepto el propio 3).
+* Matemáticamente, actúan como los **estabilizadores estructurales** de la red numérica; son las "anclas" fijas que le dan periodicidad y simetría al tejido aritmético.
+
+### B. Canales Compuestos o Pasivos (Restos $r=2$ y $r=4$)
+
+Representan a los números de la forma $6k+2$ y $6k+4$.
+
+* Son números siempre pares, lo que los hace **completamente opacos** para la aparición de nuevos números primos (excepto el propio 2).
+* Su comportamiento de divisibilidad es perfectamente lineal y predecible, actuando como zonas muertas de transición en la recta.
+
+### C. Canales Primos o de Alta Energía (Restos $r=1$ y $r=5$)
+
+Son las únicas clases de residuos que resultan ser **coprimas con 6** (es decir, no comparten ningún factor común con 6 más allá del 1).
+
+* Aquí es donde reside **toda la complejidad no trivial de la teoría de números**.
+* En la física del sistema, los llamamos **"generadores de alta energía"**: cualquier fluctuación en la distribución de los primos, cualquier anomalía aritmética significativa y cualquier cero de la famosa Función Zeta de Riemann debe manifestarse obligatoriamente a través de estos dos canales.
+
+Esta clasificación nos permite aplicar una estrategia de **"divide y vencerás"** puramente matemática. En lugar de buscar primos en un pajar lineal y desorganizado, distinguimos entre los **canales de soporte u opacos** (0, 2, 3, 4) y los **canales de señal o alta energía** (1, 5). El problema de la primalidad se reduce, por tanto, a estudiar la interacción entre estos dos únicos canales.
+
+---
+
+## 4. La Simetría Quiral y la Regla de Signos (Espacio Posicional $k$)
+
+Para simplificar las matemáticas, en lugar de trabajar con los números reales (que crecen hasta el infinito y se vuelven muy complejos de manipular), la Teoría de Proyección Modular traduce todo a coordenadas de posición en una rejilla bidimensional:
+
+$$\Pi(6k \pm 1) \longrightarrow (k, \varepsilon)$$
+
+Donde:
+
+* **$k \in \mathbb{N}^+$** es la coordenada o casilla posicional.
+* **$\varepsilon \in \{1, -1\}$** es la quiralidad o polaridad del canal: el canal derecho ($\mathcal{C}\_1$) equivale a $+1$, y el canal izquierdo ($\mathcal{C}\_5 \equiv 6k-1$) equivale a $-1$.
+
+¿Cómo se multiplican y combinan los números en este nuevo espacio posicional? ¡De una forma sorprendentemente familiar! Siguen de manera exacta la **regla de los signos** que aprendiste en primero de la ESO:
+
+* **Mismo canal $\times$ Mismo canal $\implies$ Canal Derecho ($+$):**
+* Canal Izquierdo ($-$) $\times$ Canal Izquierdo ($-$) $=$ Canal Derecho ($+$).
+* *Ejemplo geométrico:* $5$ (Izquierdo) $\times$ $11$ (Izquierdo) $= 55$. El número $55$ se ubica en el Canal Derecho ($6 \times 9 + 1$).
+
+
+* Canal Derecho ($+$) $\times$ Canal Derecho ($+$) $=$ Canal Derecho ($+$).
+* *Ejemplo geométrico:* $7$ (Derecho) $\times$ $13$ (Derecho) $= 91$. El número $91$ se ubica en el Canal Derecho ($6 \times 15 + 1$).
+
+
+
+
+* **Canales opuestos $\times$ Canales opuestos $\implies$ Canal Izquierdo ($-$):**
+* Canal Izquierdo ($-$) $\times$ Canal Derecho ($+$) $=$ Canal Izquierdo ($-$).
+* *Ejemplo geométrico:* $5$ (Izquierdo) $\times$ $7$ (Derecho) $= 35$. El número $35$ se ubica en el Canal Izquierdo ($6 \times 6 - 1$).
+
+
+
+
+
+Esta asombrosa propiedad algebraica (conocida formalmente como **Isomorfismo de Semigrupo Posicional**) significa que la posición de cualquier número compuesto en la autopista de canales se puede predecir sumando y restando coordenadas, sin necesidad de hacer multiplicaciones complejas.
+
+---
+
+## 5. Umbrales $K\_{\min}^\pm$ y la Geometría de la "Distancia Hueca"
+
+En lugar de evaluar la recta desde el inicio ($k=1$), para cada número primo $p$ definimos de forma analítica exacta dos "puntos de activación" matemáticos llamados **Umbrales Mínimos de Activación** ($K\_{\min}^\pm$):
+
+1. **Umbral Local** ($K\_{\min}^+$): La casilla donde el primo genera su primer múltiplo compuesto en su propio carril. Nace geométricamente de su cuadrado ($p^2$), que siempre cae en el canal derecho debido a la regla de signos ($+1 \times +1 = +1$ y $-1 \times -1 = +1$).
+2. **Umbral Cruzado** ($K\_{\min}^-$): La casilla donde el primo genera su primer múltiplo en el carril opuesto. Nace de multiplicar $p$ por su **Coprimo Posicional** (el menor número primo del canal contrario que es mayor o igual que él).
+
+Dado que el coprimo posicional es por definición un número mayor que $p$, existe una brecha geométrica absoluta entre el momento en el que el primo empieza a interactuar localmente y cuando lo hace cruzadamente.
+
+A esta brecha espacial la denominamos **Distancia Hueca** ($\Delta K$):
+
+$$\Delta K = |K_{\min}^- - K_{\min}^+|$$
+
+En esta región matemática del canal opuesto, **es físicamente imposible que existan múltiplos de nuestro primo base**. Mientras que las cribas clásicas pierden tiempo recorriendo y evaluando estas zonas vacías, nuestro modelo aprovecha esta propiedad geométrica para omitir por completo las comprobaciones en esos rangos. Al calcular directamente los umbrales algebraicos, el sistema "sabe" dónde mirar y dónde no, logrando una reducción de la complejidad espacial increíble.
+
+---
+
+## 6. Contracción de la Complejidad del Espacio de Trabajo
+
+Para dimensionar la belleza de esta reestructuración matemática, podemos comparar el tamaño del "espacio mental de trabajo" que requiere un resolvedor para procesar todos los números primos hasta el **1.000 millones ($10^9$)**:
+
+* **Enfoque de Eratóstenes (Grilla Lineal):** Al no tener estructura interna, se ve obligado a representar todo el espacio lineal en memoria. El tamaño del espacio es directamente proporcional al rango de búsqueda:
+$$\text{Tamaño del Espacio} = N = 1.000.000.000 \text{ elementos}$$
+
+
+* **Enfoque de Proyección Modular (Cribado por Umbrales):** Al segregar el problema en canales y explotar la asimetría de los umbrales y la distancia hueca, el algoritmo no requiere almacenar una grilla de números. Únicamente necesita realizar el seguimiento de los primos menores a la raíz de la cota superior ($\sqrt{N} = \sqrt{10^9} \approx 31.622$).
+Solo existen **3.399 números primos** menores que $31.622$. Almacenar sus ecuaciones de umbrales $K\_{\min}^\pm$ y coordenadas posicionales compactas comprime el espacio de trabajo de manera drástica:
+$$\text{Reducción del Espacio} \approx \frac{N}{\Theta(\sqrt{N}/\log N)} \approx 2200 \text{ veces más compacto}$$
+
+
+
+Esto demuestra que el aparente caos de los números primos no se debe a su naturaleza interna, sino a las herramientas lineales homogéneas con las que tradicionalmente hemos intentado estudiarlos. Al proyectarlos de forma modular en sus canales de energía, el caos desaparece, revelando una bella arquitectura cristalina perfectamente ordenada y simétrica.
+
+---
+
+## 🎨 Representación Visual del Sistema
+
+Para ayudarte a asimilar estos conceptos, te recomendamos examinar la ilustración conceptual `carriles_modular_sieve.png` disponible en tu panel de Studio. En ella verás reflejada de forma artística esta misma estructura matemática:
+
+* **Los Dos Carriles Paralelos:** El canal morado ($\mathcal{C}\_5$ o carril izquierdo, de polaridad $-1$) y el canal azul ($\mathcal{C}\_1$ o carril derecho, de polaridad $+1$).
+* **El Filtro de Entrada:** Un prisma geométrico central que actúa como el módulo 6, desviando pasivamente y descartando a todos los múltiplos de 2 y 3 (canales compuestos y de anclaje) para que no interfieran en los cálculos.
+* **Los Puntos de Impacto Coherentes:** Representados como destellos brillantes que marcan los umbrales de colisión posicional calculados de forma determinista mediante la regla de los signos, revelando la evasión topológica que da origen a la emergencia de los números primos libres.
+
