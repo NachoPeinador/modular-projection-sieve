@@ -25,7 +25,7 @@ Esta sección de **Preguntas Frecuentes (FAQ) y Mitos Comunes** está diseñada 
 ---
 
 ### ❓ FAQ 3: ¿Por qué el algoritmo no necesita calcular raíces cuadradas para operar?
-*   **El Mito:** *"Dado que todo algoritmo de criba debe detenerse en $\sqrt{N}$ para no calcular múltiplos redundantes, es obligatorio calcular raíces cuadradas flotantes para cada primo."*
+*   **El Mito:** *"Dado que todo algoritmo de criba debe detenerse en "* $\sqrt{N}$ *" para no calcular múltiplos redundantes, es obligatorio calcular raíces cuadradas flotantes para cada primo."*
 *   **La Realidad Matemática:** El cálculo tradicional de raíces cuadradas flotantes (operaciones de hardware costosas como `sqrt()`) se evita traduciendo algebraicamente el límite global del espacio entero al espacio de índices posicionales $k$.
     En lugar de evaluar la cota general $p \le \sqrt{N}$ en cada paso de manera iterativa, el algoritmo de proyección modular calcula analíticamente, una sola vez al descubrir el primo, su **Umbral Mínimo de Activación** $k\_{\min}(p)$. Mediante simples multiplicaciones de enteros en el dominio de índices, sabemos con precisión absoluta y sin margen de error dónde ocurrirá el primer múltiplo inédito del primo en cada canal:
     *   **Umbral Local** $K\_{\min}^+$ (derivado del cuadrado $p^2$ en el canal $\mathcal{C}\_1$).
