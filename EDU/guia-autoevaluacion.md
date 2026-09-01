@@ -332,26 +332,32 @@ El trilema de los algoritmos de criba de primos balancea tres variables fundamen
 #### Problema 4: Análisis Termodinámico del ROI Informacional de Transición Primorial
 **Demostración**:
 Consideramos la fórmula del Retorno de Inversión Informacional Normalizado:
+
 $$\mathrm{ROI}_{k-1 \to k} = \frac{1}{P_k} \frac{\rho_k^{-1} - \rho_{k-1}^{-1}}{(C_k - C_{k-1}) \log_2 p_k}$$
+
 Evaluamos cada variable para las dos transiciones primoriales en competencia:
 
-*   **Transición A: $2 \to 6$ (Módulo de partida $P_1 = 2$, primo añadido $p_2 = 3$, Módulo resultante $P_2 = 6$)**
-    *   Para $k=1$ (Módulo 2): $P_1 = 2$, $\rho_1 = \phi(2)/2 = 1/2 \implies \rho_1^{-1} = 2$. Canales activos: $C_1 = \phi(2) = 1$.
-    *   Para $k=2$ (Módulo 6): $P_2 = 6$, $\rho_2 = \phi(6)/6 = 2/6 = 1/3 \implies \rho_2^{-1} = 3$. Canales activos: $C_2 = \phi(6) = 2$.
-    *   Primo añadido: $p_2 = 3$.
+*   **Transición A: $2 \to 6$ (Módulo de partida $P\_1 = 2$, primo añadido $p\_2 = 3$, Módulo resultante $P\_2 = 6$)**
+    *   Para $k=1$ (Módulo 2): $P\_1 = 2$, $\rho\_1 = \phi(2)/2 = 1/2 \implies \rho\_1^{-1} = 2$. Canales activos: $C\_1 = \phi(2) = 1$.
+    *   Para $k=2$ (Módulo 6): $P\_2 = 6$, $\rho\_2 = \phi(6)/6 = 2/6 = 1/3 \implies \rho\_2^{-1} = 3$. Canales activos: $C\_2 = \phi(6) = 2$.
+    *   Primo añadido: $p\_2 = 3$.
     *   Sustituyendo en la fórmula del ROI:
+
         $$\mathrm{ROI}_{2 \to 6} = \frac{1}{6} \cdot \frac{3 - 2}{(2 - 1) \cdot \log_2 3} = \frac{1}{6 \log_2 3} = \frac{\ln 2}{6 \ln 3} \approx 0.105155$$
 
-*   **Transición B: $6 \to 30$ (Módulo de partida $P_2 = 6$, primo añadido $p_3 = 5$, Módulo resultante $P_3 = 30$)**
-    *   Para $k=2$ (Módulo 6): $P_2 = 6$, $\rho_2 = 1/3 \implies \rho_2^{-1} = 3$. Canales activos: $C_2 = 2$.
-    *   Para $k=3$ (Módulo 30): $P_3 = 30$, $\rho_3 = \phi(30)/30 = 8/30 = 4/15 \implies \rho_3^{-1} = 15/4 = 3.75$. Canales activos: $C_3 = \phi(30) = 8$.
-    *   Primo añadido: $p_3 = 5$.
+*   **Transición B: $6 \to 30$ (Módulo de partida $P\_2 = 6$, primo añadido $p\_3 = 5$, Módulo resultante $P\_3 = 30$)**
+    *   Para $k=2$ (Módulo 6): $P\_2 = 6$, $\rho\_2 = 1/3 \implies \rho\_2^{-1} = 3$. Canales activos: $C\_2 = 2$.
+    *   Para $k=3$ (Módulo 30): $P\_3 = 30$, $\rho\_3 = \phi(30)/30 = 8/30 = 4/15 \implies \rho\_3^{-1} = 15/4 = 3.75$. Canales activos: $C\_3 = \phi(30) = 8$.
+    *   Primo añadido: $p\_3 = 5$.
     *   Sustituyendo en la fórmula del ROI:
+
         $$\mathrm{ROI}_{6 \to 30} = \frac{1}{30} \cdot \frac{3.75 - 3}{(8 - 2) \cdot \log_2 5} = \frac{1}{30} \cdot \frac{0.75}{6 \cdot \log_2 5} = \frac{0.75}{180 \log_2 5} = \frac{1}{240 \log_2 5} \approx 0.001794$$
 
 *   **Análisis Comparativo**:
     La transición primorial $2 \to 6$ arroja un ROI de $\approx 0.105155$, mientras que la transición $6 \to 30$ decae drásticamente a $\approx 0.001794$. Calculando el ratio de eficiencia informacional:
+
     $$\text{Ratio} = \frac{\mathrm{ROI}_{2 \to 6}}{\mathrm{ROI}_{6 \to 30}} = \frac{0.105155}{0.001794} \approx 58.6$$
+
     La transición $2 \to 6$ (módulo 6) es más de **58 veces** más eficiente informacionalmente que escalar al módulo 30.
     *(Nota: Si se evalúa usando la aproximación simplificada descrita en secciones del artículo, la razón de cambio asume un factor de $3.52$ veces, pero en ambos casos se demuestra analíticamente que la transición hacia el módulo 30 representa un desplome rotundo de rendimiento).*
     Esto demuestra de forma rigurosa que el anillo cociente $\mathbb{Z}/6\mathbb{Z}$ es el único punto crítico de Pareto que minimiza la entropía de decisión en el espacio de estados de la criba, consolidando la optimalidad absoluta del módulo 6.
