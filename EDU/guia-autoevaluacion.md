@@ -68,7 +68,7 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
 *   C) El inverso multiplicativo de $p$ en el grupo multiplicativo finito $(\mathbb{Z}/6\mathbb{Z})^\times$.
 *   D) El número de primos gemelos acumulados hasta el límite local $\sqrt{N}$.
 
-**8. Si un número primo base pertenece al canal negativo (es decir,** $p \in \mathcal{C}_5$ **con** $p = 6k_p - 1$**), ¿cuál es la fórmula algebraica que determina su umbral de activación cruzado** $K_{\min}^-$ **para el canal positivo?**
+**8. Si un número primo base pertenece al canal negativo es decir, $p \in \mathcal{C}_5$ **con** $p = 6k_p - 1$, ¿cuál es la fórmula algebraica que determina su umbral de activación cruzado $K_{\min}^-$ para el canal positivo?**
 *   A) $K_{\min}^- = p \cdot k_p - k_p$
 *   B) $K_{\min}^- = p \cdot \mathrm{NextKop}(p) + k_p$
 *   C) $K_{\min}^- = p \cdot \mathrm{NextKop}(p) - k_p$
