@@ -153,7 +153,7 @@ Esto demuestra que el aparente caos de los números primos no se debe a su natur
 
 Para ayudarte a asimilar estos conceptos, puedes examinar la ilustración conceptual del **Anillo Modular ($\mathbb{Z}/6\mathbb{Z}$)**:
 
-![Estructura del Anillo Modular Z/6Z](https://raw.githubusercontent.com/NachoPeinador/modular-projection-sieve/main/Images/carriles_modular_sieve.jpg)
+![Estructura del Anillo Modular Z/6Z](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Images/carriles_modular_sieve.jpg)
 
 En esta representación tridimensional del sistema verás reflejada fielmente la estructura matemática descrita:
 
@@ -164,6 +164,8 @@ En esta representación tridimensional del sistema verás reflejada fielmente la
 * **El Ancla Central de Baja Entropía ($0$):** El panel frontal dorado/naranja que resalta el residuo $0$ ($6k$), actuando como el estabilizador simétrico del sistema.
 * **Canales Pasivos y Secundarios ($2$, $3$ y $4$):** Representados en tono tenue en el fondo del cilindro, descartados de la búsqueda por corresponder a números pares o múltiplos de 3.
 * **Lazos de Entrelazamiento Quiral (Trenza Infinita):** La doble cinta de energía fotónica (azul y magenta) que gira en forma de infinito rodeando el cilindro, conectando topológicamente los canales $1$ y $5$ a través de sus umbrales $K_{\min}^\pm$.
+
+---
 
 ## 🏫 ¡A la Pizarra! Dos Ejemplos Prácticos Paso a Paso (25 y 35)
 
