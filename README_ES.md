@@ -10,6 +10,7 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043294-blue.svg)](https://doi.org/10.5281/zenodo.22043294)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
 [![Artículo PDF](https://img.shields.io/badge/Artículo-Leer_PDF-B31B1B?style=flat&logo=latex&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Papers/TAC_por_Proyeccion_Modular.pdf)
+[![Espacio Educativo](https://img.shields.io/badge/EDU-Espacio_Educativo-1A5276?style=flat&logo=book&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/EDU/ESPACIO_EDUCATIVO.md)
 
 ---
 
