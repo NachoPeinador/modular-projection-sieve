@@ -157,3 +157,99 @@ Para ayudarte a asimilar estos conceptos, te recomendamos examinar la ilustraci�
 * **El Filtro de Entrada:** Un prisma geométrico central que actúa como el módulo 6, desviando pasivamente y descartando a todos los múltiplos de 2 y 3 (canales compuestos y de anclaje) para que no interfieran en los cálculos.
 * **Los Puntos de Impacto Coherentes:** Representados como destellos brillantes que marcan los umbrales de colisión posicional calculados de forma determinista mediante la regla de los signos, revelando la evasión topológica que da origen a la emergencia de los números primos libres.
 
+## 🏫 ¡A la Pizarra! Dos Ejemplos Prácticos Paso a Paso (25 y 35)
+
+Para consolidar lo aprendido, vamos a bajar estos conceptos abstractos a la pizarra y resolver **dos ejemplos prácticos** con lápiz y papel. Veremos exactamente por qué los números **25** y **35** no son primos, utilizando tanto la **Regla de la Colisión** como la **Operación Estrella ($\star$)**.
+
+Para este rango, el único "primo base" que necesitamos "despertar" en nuestro sistema es el **5** (ya que $5 \le \sqrt{35}$).
+
+*   **Coordenada del Primo Base 5:** Como al dividir 5 entre 6 nos da resto 5 (que en nuestra simetría quiral equivale a $-1$), su coordenada es:
+
+    $$5 = 6(1) - 1 \implies (k_p = 1, \varepsilon_p = -1)$$
+
+---
+
+### 💥 Caso 1: Analizando el Número 25
+
+#### Paso A: Traducir a coordenadas
+Dividimos 25 entre 6 para encontrar su casilla ($k$) y su carril ($\varepsilon$):
+
+$$25 = 6(4) + 1 \implies \text{Casilla } k = 4, \text{ Carril } \varepsilon = +1 \text{ (Carril Derecho)}$$
+
+Así, la coordenada de nuestro candidato es **$(4, +1)$**.
+
+#### Paso B: Comprobar por "Regla de la Colisión"
+Como nuestro primo base 5 vive en el Carril Izquierdo ($\varepsilon\_p = -1$) y el candidato 25 vive en el Carril Derecho ($\varepsilon = +1$), ambos viajan por **carriles opuestos**.
+
+La matemática nos dice que para carriles opuestos (polaridades distintas), habrá una colisión si la casilla del candidato ($k$) cumple la siguiente relación con la casilla del primo ($k\_p$) en aritmética modular de resto:
+
+$$k \equiv -k_p \pmod p \quad \iff \quad k \equiv p - k_p \pmod p$$
+
+Sustituyendo nuestros valores reales ($k = 4$, $k\_p = 1$, $p = 5$):
+
+$$4 \equiv 5 - 1 \pmod 5 \quad \iff \quad 4 \equiv 4 \pmod 5$$
+
+¡La igualdad es exacta! Como el resto de dividir 4 entre 5 es efectivamente 4, se produce una **colisión cruzada perfecta**. El primo 5 genera una aniquilación en la casilla 4 del carril opuesto, por lo que **25 queda descartado como primo**.
+
+#### Paso C: Comprobar por "Operación Estrella ($\star$)"
+¿Podemos "fabricar" el número 25 fusionando coordenadas de primos usando nuestra operación estrella? Vamos a multiplicar el primo 5 por sí mismo:
+
+$$(k\_1 = 1, \varepsilon\_1 = -1) \star (k\_2 = 1, \varepsilon\_2 = -1)$$
+
+Aplicamos las fórmulas de fusión posicional:
+
+1.  **Casilla Resultante ($K$):**
+    $$K = 6k_1k_2 + \varepsilon_1 k_2 + \varepsilon_2 k_1$$
+    $$K = 6(1)(1) + (-1)(1) + (-1)(1) = 6 - 1 - 1 = 4$$
+2.  **Carril Resultante ($\varepsilon\_R$):**
+    $$\varepsilon_R = \varepsilon_1 \cdot \varepsilon_2 = (-1) \cdot (-1) = +1 \text{ (regla de los signos: menos por menos es más)}$$
+
+Obtenemos la coordenada resultante **$(4, +1)$**. Si la devolvemos a su forma numérica clásica:
+
+$$6(K) + \varepsilon_R = 6(4) + 1 = 25$$
+
+¡Magia! Hemos demostrado de forma puramente geométrica que el 25 es el compuesto resultante del autoentrelazamiento del primo 5.
+
+---
+
+### 💥 Caso 2: Analizando el Número 35
+
+#### Paso A: Traducir a coordenadas
+Dividimos 35 entre 6:
+
+$$35 = 6(6) - 1 \implies \text{Casilla } k = 6, \text{ Carril } \varepsilon = -1 \text{ (Carril Izquierdo)}$$
+
+Así, la coordenada de nuestro candidato es **$(6, -1)$**.
+
+#### Paso B: Comprobar por "Regla de la Colisión"
+Tanto nuestro primo base 5 ($\varepsilon\_p = -1$) como el candidato 35 ($\varepsilon = -1$) viajan por el **mismo carril** (el izquierdo).
+
+La regla para colisiones en el mismo carril (mismas polaridades) nos dice que habrá choque si la casilla del candidato ($k$) y la del primo ($k\_p$) cumplen:
+
+$$k \equiv k_p \pmod p \quad (\text{para } k > k_p)$$
+
+Sustituyendo nuestros valores reales ($k = 6$, $k\_p = 1$, $p = 5$):
+
+$$6 \equiv 1 \pmod 5$$
+
+Hacemos la prueba: $6 - 1 = 5$, que es perfectamente divisible por 5 (el resto de dividir 6 entre 5 es efectivamente 1). Como además la casilla $6$ es mayor que la casilla $1$, la colisión se cumple. **El primo 5 aniquila la casilla $k=6$ de su propio carril, descartando al 35 como primo**.
+
+#### Paso C: Comprobar por "Operación Estrella ($\star$)"
+¿Podemos fabricar el 35 fusionando coordenadas? Probemos a entrelazar el primo 5 con el primo 7:
+
+*   **Primo 5:** $(k\_1 = 1, \varepsilon\_1 = -1)$
+*   **Primo 7:** $7 = 6(1) + 1 \implies (k\_2 = 1, \varepsilon\_2 = +1)$
+
+Aplicamos las fórmulas de fusión posicional para $(1, -1) \star (1, +1)$:
+
+1.  **Casilla Resultante ($K$):**
+    $$K = 6k_1k_2 + \varepsilon_1 k_2 + \varepsilon_2 k_1$$
+    $$K = 6(1)(1) + (-1)(1) + (+1)(1) = 6 - 1 + 1 = 6$$
+2.  **Carril Resultante ($\varepsilon\_R$):**
+    $$\varepsilon_R = \varepsilon_1 \cdot \varepsilon_2 = (-1) \cdot (+1) = -1 \text{ (regla de los signos: menos por más es menos)}$$
+
+Obtenemos la coordenada resultante **$(6, -1)$**. Si la devolvemos a su forma numérica clásica:
+
+$$6(K) + \varepsilon_R = 6(6) - 1 = 35$$
+
+¡La geometría vuelve a triunfar! El 35 queda revelado como la colisión cruzada perfecta entre el primo 5 y el primo 7 en la red de la autopista modular.
