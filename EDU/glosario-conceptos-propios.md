@@ -14,7 +14,7 @@ Cada concepto aquí expuesto se fundamenta en las estructuras algebraicas que ri
 ## Índice de Conceptos
 1. [Canal Modular ($\mathcal{C}_1$ y $\mathcal{C}_5$)](#1-canal-modular-mathcalc_1-y-mathcalc_5)
 2. [Simetría Quiral y Operación Estrella ($\star$)](#2-simetria-quiral-y-operacion-estrella-star)
-3. [Coprimo Posicional (NextKop / $\mathrm{Cop}(p)$)]( #3-coprimo-posicional-nextkop--mathrmcopp )
+3. [Coprimo Posicional NextKop / $\mathrm{Cop}(p)$](#3-coprimo-posicional-nextkop--mathrmcopp)
 4. [Brecha Quiral (Chiral Gap)](#4-brecha-quiral-chiral-gap)
 5. [Distancia Hueca (Hollow Distance / $\Delta K$)](#5-distancia-hueca-hollow-distance--delta-k)
 6. [Desierto Topológico (Topological Desert)](#6-desierto-topologico-topological-desert)
