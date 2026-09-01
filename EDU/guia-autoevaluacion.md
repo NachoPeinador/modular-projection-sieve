@@ -198,7 +198,7 @@ Esta guía ha sido diseñada como una herramienta avanzada de autoevaluación pa
     *   **Referencias**: *Capitulo_3_Caos_y_Optimalidad_ipynb.txt [Excerpts 43, 45: ROI de Transición]*; *TAC_por_Proyeccion_Modular.txt [Teorema 3.11 (Optimalidad Termodinámica)]*.
 
 12. **Respuesta Correcta: B.**
-    *   **Explicación**: La identidad cuadrática de Dirichlet $L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \pi^2 / 9$ indica que el factor de coherencia espectral del módulo 6 es $R_1(6) = 1.000$. En el procesamiento de señales aritméticas, esto significa que $\mathbb{Z}/6\mathbb{Z}$ es un canal perfectamente adaptado y libre de ruido espectral, donde toda la energía espectral (dada por $L(2)$) se transmite de forma coherente con la amplitud cuadrada de fase (dada por $L(1)$).
+    *   **Explicación**: La identidad cuadrática de Dirichlet $L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \pi^2 / 9$ indica que el factor de coherencia espectral del módulo 6 es $R_1(6) = 1.000$. En el procesamiento de señales aritméticas, esto significa que $\mathbb{Z}/6\mathbb{Z}$ es un canal perfectamente adaptado y libre de ruido espectral, donde toda la energía espectral dada por $L(2)$ se transmite de forma coherente con la amplitud cuadrada de fase dada por $L(1)$.
     *   **Referencias**: *TAC_por_Proyeccion_Modular.txt [Teorema 3.12 y Corolario 3.13 (Coherencia Espectral)]*.
 
 13. **Respuesta Correcta: B.**
