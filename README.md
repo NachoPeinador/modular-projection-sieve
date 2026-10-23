@@ -60,7 +60,7 @@ $$\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p \quad (\mathcal{C}_1), \qquad \
 
 ### 4. Structural Optimality of Modulus $m=6$
 - **Algebraic Minimality (Theorem 5.4):** $m=6$ uniquely minimizes the candidate survival density $\rho(m) = \phi(m)/m = 1/3$ among all moduli with $\phi(m) \le 2$.
-- **Analytic $L$-Value Identity (Theorem 5.5):** For the principal character $\chi_0^{(6)}$ and the primitive quadratic character $\chi_{12} = \chi_{-4}\chi_0^{(3)}$[cite: 1]:
+- **Analytic $L$-Value Identity (Theorem 5.5):** For the principal character $\chi_0^{(6)}$ and the primitive quadratic character $\chi_{12} = \chi_{-4}\chi_0^{(3)}$:
 
   $$L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \frac{\pi^2}{9}.$$
 
