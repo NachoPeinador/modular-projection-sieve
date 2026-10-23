@@ -16,50 +16,50 @@
 
 This repository hosts the official research archive, formal verification library, and computational benchmarks for the paper:
 
-> **Algebraic Theory of Modular Projection Sieving: Prime-Coprime Entanglement and Asymmetric Activation Thresholds**[cite: 1]  
-> *Author:* José Ignacio Peinador Sala (Independent Researcher, Valladolid, Spain)[cite: 1]  
-> *Target Journal:* **Mathematics of Computation** (American Mathematical Society)[cite: 1]  
+> **Algebraic Theory of Modular Projection Sieving: Prime-Coprime Entanglement and Asymmetric Activation Thresholds** 
+> *Author:* José Ignacio Peinador Sala (Independent Researcher, Valladolid, Spain)
+> *Target Journal:* **Mathematics of Computation** (American Mathematical Society)
 > *AMS Submission Identifier:* `261023-PeinadorSala` (Submitted: October 23, 2026)  
 > *Permanent DOI Archive:* [10.5281/zenodo.22043293](https://doi.org/10.5281/zenodo.22043293)
 
-The manuscript develops an algebraic theory of modular projection sieving over the unit group $(\mathbb{Z}/6\mathbb{Z})^\times = \lbrace 1, 5 \rbrace$, defining the dual active channels[cite: 1]:
+The manuscript develops an algebraic theory of modular projection sieving over the unit group $(\mathbb{Z}/6\mathbb{Z})^\times = \lbrace 1, 5 \rbrace$, defining the dual active channels:
 
 $$\mathcal{C}_1 = \lbrace 6k+1 \rbrace_{k \ge 1}, \qquad \mathcal{C}_5 = \lbrace 6k-1 \rbrace_{k \ge 1}.$$
 
-While classical wheel sieves apply a single symmetric activation boundary $\kappa_{\min}(p) = (p^2-1)/6$ across all residue classes, this work establishes that this boundary is suboptimal for channel $\mathcal{C}_5$[cite: 1]. The correct threshold is strictly delayed, deterministic, and dictated by a canonical chiral pairing across opposite channels designated **prime-coprime entanglement**[cite: 1].
+While classical wheel sieves apply a single symmetric activation boundary $\kappa_{\min}(p) = (p^2-1)/6$ across all residue classes, this work establishes that this boundary is suboptimal for channel $\mathcal{C}_5$[cite: 1]. The correct threshold is strictly delayed, deterministic, and dictated by a canonical chiral pairing across opposite channels designated **prime-coprime entanglement**.
 
 ---
 
 ## 📐 Mathematical Core & Key Theoretical Results
 
 ### 1. Explicit Asymmetric Activation Thresholds ($\kappa_{\min}^\pm$)
-For every base prime $p = 6k_p + \varepsilon_p > 3$ with $\varepsilon_p \in \lbrace -1, +1 \rbrace$, we formalize the **positional coprime** $\mathrm{Cop}(p)$ as the minimal prime $q = 6k_q - \varepsilon_p$ in the opposite channel satisfying[cite: 1]:
+For every base prime $p = 6k_p + \varepsilon_p > 3$ with $\varepsilon_p \in \lbrace -1, +1 \rbrace$, we formalize the **positional coprime** $\mathrm{Cop}(p)$ as the minimal prime $q = 6k_q - \varepsilon_p$ in the opposite channel satisfying:
 
 $$k_q \ge \begin{cases} k_p, & \text{if } \varepsilon_p = -1 \ (p \in \mathcal{C}_5), \\ k_p + 1, & \text{if } \varepsilon_p = +1 \ (p \in \mathcal{C}_1). \end{cases}$$
 
-Setting $\mathrm{NextKop}(p) = k_q$, the exact activation boundaries in the two channels are[cite: 1]:
+Setting $\mathrm{NextKop}(p) = k_q$, the exact activation boundaries in the two channels are:
 
 $$\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p \quad (\mathcal{C}_1), \qquad \kappa_{\min}^-(p) = p\,\mathrm{NextKop}(p) - \varepsilon_p k_p \quad (\mathcal{C}_5).$$
 
-- **Strict Threshold Domination (Theorem 2.9):** For every $p \in \mathcal{P}_{>3}$, $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ holds strictly, with equality if and only if $p \in \mathcal{C}_5$ and $k_q = k_p$, in which case $\lbrace p, \mathrm{Cop}(p) \rbrace$ forms a twin-prime pair[cite: 1].
+- **Strict Threshold Domination (Theorem 2.9):** For every $p \in \mathcal{P}_{>3}$, $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ holds strictly, with equality if and only if $p \in \mathcal{C}_5$ and $k_q = k_p$, in which case $\lbrace p, \mathrm{Cop}(p) \rbrace$ forms a twin-prime pair.
 
 ### 2. Twin Primes as the Entanglement Ground State
-- **Quadratic Annihilator (Theorem 3.2):** An index $k \in \mathbb{N}^+$ generates a twin-prime pair $(6k-1, 6k+1)$ if and only if[cite: 1]:
+- **Quadratic Annihilator (Theorem 3.2):** An index $k \in \mathbb{N}^+$ generates a twin-prime pair $(6k-1, 6k+1)$ if and only if:
 
   $$k^2 - k_p^2 \not\equiv 0 \pmod{p} \qquad \forall p \in \mathcal{P}_{>3}, \ p \le \sqrt{6k+1}.$$
 
-- **Local Ground State (Proposition 3.3):** The entanglement jump $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ vanishes ($\Delta k(p) = 0$) if and only if $p \in \mathcal{C}_5$ and $p+2$ is prime[cite: 1].
-- **Hardy–Littlewood Heuristic (Proposition 3.4):** Under the standard local independence hypothesis, the surviving density of the quadratic annihilator reproduces the Hardy–Littlewood local product[cite: 1]:
+- **Local Ground State (Proposition 3.3):** The entanglement jump $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ vanishes ($\Delta k(p) = 0$) if and only if $p \in \mathcal{C}_5$ and $p+2$ is prime.
+- **Hardy–Littlewood Heuristic (Proposition 3.4):** Under the standard local independence hypothesis, the surviving density of the quadratic annihilator reproduces the Hardy–Littlewood local product:
 
   $$\prod_{p \ge 5} \left(1 - \frac{1}{(p-1)^2}\right) = \frac{4}{3}C_2.$$
 
 ### 3. Complexity & Asymptotic Optimality in Positional Sieving
-- **Working Memory (Theorem 4.4):** $\Theta(\sqrt{N}/\log N)$ words (no boolean array of size $N$ is allocated)[cite: 1].
-- **Time Complexity (Theorem 4.5):** $O(N^{3/2}/\log N)$ elementary operations[cite: 1].
-- **Matching Lower Bound (Theorem 4.6):** Any deterministic, state-vectorless sieve algorithm certifying primality via positional divisibility requires $\Omega(N^{3/2}/\log N)$ operations in the worst case[cite: 1]. The algorithm is therefore asymptotically optimal within the state-vectorless positional class[cite: 1].
+- **Working Memory (Theorem 4.4):** $\Theta(\sqrt{N}/\log N)$ words (no boolean array of size $N$ is allocated).
+- **Time Complexity (Theorem 4.5):** $O(N^{3/2}/\log N)$ elementary operations.
+- **Matching Lower Bound (Theorem 4.6):** Any deterministic, state-vectorless sieve algorithm certifying primality via positional divisibility requires $\Omega(N^{3/2}/\log N)$ operations in the worst case. The algorithm is therefore asymptotically optimal within the state-vectorless positional class.
 
 ### 4. Structural Optimality of Modulus $m=6$
-- **Algebraic Minimality (Theorem 5.4):** $m=6$ uniquely minimizes the candidate survival density $\rho(m) = \phi(m)/m = 1/3$ among all moduli with $\phi(m) \le 2$[cite: 1].
+- **Algebraic Minimality (Theorem 5.4):** $m=6$ uniquely minimizes the candidate survival density $\rho(m) = \phi(m)/m = 1/3$ among all moduli with $\phi(m) \le 2$.
 - **Analytic $L$-Value Identity (Theorem 5.5):** For the principal character $\chi_0^{(6)}$ and the primitive quadratic character $\chi_{12} = \chi_{-4}\chi_0^{(3)}$[cite: 1]:
 
   $$L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \frac{\pi^2}{9}.$$
@@ -68,7 +68,7 @@ $$\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p \quad (\mathcal{C}_1), \qquad \
 
 ## 🛡️ Formal Verification in Lean 4 (Mathlib4)
 
-All algebraic results in the manuscript are certified in **Lean 4** (v4.35.0) with strictly **0 `sorry` gaps** and **0 global `axiom` declarations**[cite: 1, 19]. The suite comprises **19 self-contained modules** (91 theorems, 30 definitions) audited by the Lean 4 kernel[cite: 1, 19]:
+All algebraic results in the manuscript are certified in **Lean 4** (v4.35.0) with strictly **0 `sorry` gaps** and **0 global `axiom` declarations**. The suite comprises **19 self-contained modules** (91 theorems, 30 definitions) audited by the Lean 4 kernel:
 
 | Module Name | Level | Reference | Key Formally Certified Result |
 | :--- | :---: | :--- | :--- |
@@ -93,19 +93,19 @@ All algebraic results in the manuscript are certified in **Lean 4** (v4.35.0) wi
 | `AnalyticOptimality.lean` | **N1-P** | Thm 5.5 | Proof that $L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \pi^2/9$ (conditional on $\zeta(2), L(1, \chi_{-4})$). |
 
 - **Level N1 (17 modules):** Pure constructive/algebraic theorems proven strictly from Lean 4/Mathlib axioms[cite: 1, 19].
-- **Level N1-P (2 modules):** Pure proofs where external analytic inputs (Dirichlet, classical $L$-values) are localized as explicit signature hypotheses, preventing global axiomatic pollution[cite: 1, 19].
+- **Level N1-P (2 modules):** Pure proofs where external analytic inputs (Dirichlet, classical $L$-values) are localized as explicit signature hypotheses, preventing global axiomatic pollution.
 
 ---
 
 ## ⚡ Computational Benchmark Pipeline
 
-The empirical validation is implemented as an autonomous JIT-compiled engine in **Python 3.13 / Numba 0.61**[cite: 1]:
+The empirical validation is implemented as an autonomous JIT-compiled engine in **Python 3.13 / Numba 0.61**:
 
-1. **Protocol Rigor (§5.1):** Warm-up iterations, median over 10 repetitions, IQR dispersion, and 95% bootstrap confidence intervals ($B = 10^4$). Single-threaded CPU execution[cite: 1].
-2. **Exact Counting (§5.2):** Certified exact prime counting $\pi(N)$ up to $N \sim 3 \times 10^8$ without omission or false detection (reproducing values matching Oliveira e Silva et al.)[cite: 1].
-3. **Transition Ratios (§5.3):** Empirical runtime scaling ratios match theoretical predictions $\Theta(N^{3/2}/\log N)$ to within 5% for all scales $N \ge 10^6$[cite: 1].
-4. **Entanglement Jumps (§5.4):** Complete distribution of $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ at two scales ($N \sim 6 \times 10^7$ and $N \sim 6 \times 10^8$) with Wilson 95% confidence intervals[cite: 1]. Demonstrates that ground-state density ($\Delta k = 0$) decreases from 15.75% to 13.83%, consistent with twin-prime decay[cite: 1].
-5. **Record Jumps (§5.5):** Analysis of 32 record jumps up to $N \sim 6 \times 10^8$ (maximum $\Delta k = 87$ at $p = 393{,}202{,}127$), comparative model fitting (power law vs. exponential law via AIC/BIC), and Hill tail index estimation[cite: 1].
+1. **Protocol Rigor (§5.1):** Warm-up iterations, median over 10 repetitions, IQR dispersion, and 95% bootstrap confidence intervals ($B = 10^4$). Single-threaded CPU execution.
+2. **Exact Counting (§5.2):** Certified exact prime counting $\pi(N)$ up to $N \sim 3 \times 10^8$ without omission or false detection (reproducing values matching Oliveira e Silva et al.).
+3. **Transition Ratios (§5.3):** Empirical runtime scaling ratios match theoretical predictions $\Theta(N^{3/2}/\log N)$ to within 5% for all scales $N \ge 10^6$.
+4. **Entanglement Jumps (§5.4):** Complete distribution of $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ at two scales ($N \sim 6 \times 10^7$ and $N \sim 6 \times 10^8$) with Wilson 95% confidence intervals. Demonstrates that ground-state density ($\Delta k = 0$) decreases from 15.75% to 13.83%, consistent with twin-prime decay.
+5. **Record Jumps (§5.5):** Analysis of 32 record jumps up to $N \sim 6 \times 10^8$ (maximum $\Delta k = 87$ at $p = 393{,}202{,}127$), comparative model fitting (power law vs. exponential law via AIC/BIC), and Hill tail index estimation.
 
 ---
 
@@ -194,7 +194,6 @@ If you utilize this algebraic framework, the asymmetric threshold formulation, o
 }
 
 ```
-
 ---
 
 ## ⚖️ License
