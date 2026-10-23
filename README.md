@@ -92,7 +92,7 @@ All algebraic results in the manuscript are certified in **Lean 4** (v4.35.0) wi
 | `OptimalityM6.lean` | **N1** | Thm 5.4 | Strict minimization of $\rho(m) = \phi(m)/m$ at $m=6$ among $\phi(m) \le 2$. |
 | `AnalyticOptimality.lean` | **N1-P** | Thm 5.5 | Proof that $L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \pi^2/9$ (conditional on $\zeta(2), L(1, \chi_{-4})$). |
 
-- **Level N1 (17 modules):** Pure constructive/algebraic theorems proven strictly from Lean 4/Mathlib axioms[cite: 1, 19].
+- **Level N1 (17 modules):** Pure constructive/algebraic theorems proven strictly from Lean 4/Mathlib axioms.
 - **Level N1-P (2 modules):** Pure proofs where external analytic inputs (Dirichlet, classical $L$-values) are localized as explicit signature hypotheses, preventing global axiomatic pollution.
 
 ---
