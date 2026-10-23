@@ -2,11 +2,11 @@
 
 ### Prime-Coprime Entanglement, Asymmetric Activation Thresholds, and Formal Verification in Lean 4
 
-[![Lean 4 Certified](https://img.shields.io/badge/Lean_4-19_Modules_Certified-purple?style=flat&logo=lean&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/tree/main/Lean)
+[![Lean 4 Certified](https://img.shields.io/badge/Lean_4-19_Modules_Certified-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Lean4_Theory_of_Modular_Projection_Sieving.ipynb)
 [![Mathlib4](https://img.shields.io/badge/Mathlib4-v4.35.0-blue?style=flat)](https://github.com/leanprover-community/mathlib4)
 [![Lean4 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Lean4_Theory_of_Modular_Projection_Sieving.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/ATM_Experimental_Suite.ipynb)
-[![DOI: 10.5281/zenodo.22043294](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043294-blue.svg)](https://doi.org/10.5281/zenodo.22043294)
+[![DOI: 10.5281/zenodo.22043293](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043293-blue.svg)](https://doi.org/10.5281/zenodo.22043293)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
 
