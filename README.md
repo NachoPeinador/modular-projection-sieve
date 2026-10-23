@@ -41,7 +41,7 @@ Setting $\mathrm{NextKop}(p) = k_q$, the exact activation boundaries in the two 
 
 $$\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p \quad (\mathcal{C}_1), \qquad \kappa_{\min}^-(p) = p\,\mathrm{NextKop}(p) - \varepsilon_p k_p \quad (\mathcal{C}_5).$$
 
-- **Strict Threshold Domination (Theorem 2.9):** For every $p \in \mathcal{P}_{>3}$, $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ holds strictly, with equality if and only if $p \in \mathcal{C}_5$ and $k_q = k_p$, in which case $\lbrace p, \mathrm{Cop}(p) \rbrace$ forms a twin-prime pair.
+- **Strict Threshold Domination (Theorem 2.9):** For every base prime $p > 3$, the inequality $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ holds strictly, with equality if and only if $p \in \mathcal{C}_5$ and $k_q = k_p$, in which case $\lbrace p, \mathrm{Cop}(p) \rbrace$ forms a twin-prime pair.
 
 ### 2. Twin Primes as the Entanglement Ground State
 - **Quadratic Annihilator (Theorem 3.2):** An index $k \in \mathbb{N}^+$ generates a twin-prime pair $(6k-1, 6k+1)$ if and only if:
