@@ -1,160 +1,190 @@
-# 🌀 Modular Projection Sieve
+# Algebraic Theory of Modular Projection Sieving
 
-### Sublinear Memory Prime Sieving via $\mathbb{Z}/6\mathbb{Z}$ Projection, $K_{\min}\pm$ Chiral Entanglement, and GOE Quantum Spectroscopy
+### Prime-Coprime Entanglement, Asymmetric Activation Thresholds, and Formal Verification in Lean 4
 
-[![Read in Spanish](https://img.shields.io/badge/Lang-Leer%20en%20Español-red?style=flat&logoColor=white&color=B31B1B)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/README_ES.md)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Certified_Proof-purple?style=flat&logo=lean&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22043294.svg)](https://doi.org/10.5281/zenodo.22043294)
+[![Lean 4 Certified](https://img.shields.io/badge/Lean_4-19_Modules_Certified-purple?style=flat&logo=lean&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/tree/main/Lean)
+[![Mathlib4](https://img.shields.io/badge/Mathlib4-v4.35.0-blue?style=flat)](https://github.com/leanprover-community/mathlib4)
+[![Lean4 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Lean4_Theory_of_Modular_Projection_Sieving.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/ATM_Experimental_Suite.ipynb)
+[![DOI: 10.5281/zenodo.22043294](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22043294-blue.svg)](https://doi.org/10.5281/zenodo.22043294)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
-[![Paper PDF](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=flat&logo=latex&logoColor=white)](https://github.com/NachoPeinador/modular-projection-sieve/blob/main/Papers/ATM_Projection_Sieving.pdf)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🎯 TL;DR – The Essentials
+## 🔬 Scientific Overview
 
-### 🔬 **Theoretical Core**
+This repository hosts the official research archive, formal verification library, and computational benchmarks for the paper:
 
-* 🧩 **Modular Projection over $(\mathbb{Z}/6\mathbb{Z})^\times$:** Reframes prime numbers $p > 3$ as positional indices $k$ in dual chiral channels ($6k \pm 1$), eliminating 66.67% of the integer search space passively without memory allocation.
-* ⚛️ **Prime-Coprime Entanglement ($K_{\min}\pm$):** Reveals that prime integers in $(\mathbb{Z}/6\mathbb{Z})^\times$ form conjugated pairs that deterministically dictate composite generation thresholds. The ground state ($\Delta k = 0$) corresponds geometrically to twin prime pairs.
-* 🌌 **Discrete Quantum Chaos (GOE):** Matrix representation of the sieve operator $\mathbf{H}_N = MM^T$ exhibits a degenerate null-space (99.99% dimension collapse isolating primes) and excited level repulsion ($\langle r \rangle \approx 0.4989$) belonging to the **Gaussian Orthogonal Ensemble (GOE)**.
+> **Algebraic Theory of Modular Projection Sieving: Prime-Coprime Entanglement and Asymmetric Activation Thresholds**  
+> *Author:* José Ignacio Peinador Sala (Independent Researcher, Valladolid, Spain)  
+> *Target Journal:* **Mathematics of Computation** (American Mathematical Society)  
+> *AMS Submission Identifier:* `261023-PeinadorSala` (Submitted: October 23, 2026)  
+> *Permanent DOI Archive:* [10.5281/zenodo.22043293](https://doi.org/10.5281/zenodo.22043293)
 
-### ⚡ **Computational Benchmarks**
+The manuscript develops an algebraic theory of modular projection sieving over the unit group $(\mathbb{Z}/6\mathbb{Z})^\times = \{1, 5\}$, defining the dual active channels:
+$$\mathcal{C}_1 = \{6k+1\}_{k \ge 1}, \qquad \mathcal{C}_5 = \{6k-1\}_{k \ge 1}.$$
 
-* 💾 **Ultra-Low Memory Footprint:** Operates under a deterministic spatial complexity of $\Theta(\sqrt{N}/\log N)$. Requires merely **$53.1$ KB** of working RAM for $N=10^9$ (over $2,240\times$ less memory than the classical Sieve of Eratosthenes).
-* 🎯 **Deterministic Accuracy:** $0.0\%$ error rate up to $N=10^9$, reproducing the exact count of $\pi(10^9) = 50,847,534$ primes.
-* 🔒 **Axiom-Free Certification:** The positional isomorphism, $K_{\min}\pm$ thresholds, and strict matrix self-adjointness ($\mathbf{H}_N^\dagger = \mathbf{H}_N$) are mechanistically verified without omitted axioms (`sorry-free`) in **Lean 4**.
-
----
-
-## 🔍 Research Overview
-
-The distribution of prime numbers is traditionally studied either via multiplicative algorithms (such as the Sieve of Eratosthenes) or through the zeros of the Riemann zeta function. 
-
-This repository introduces an **Algebraic Theory of Modular Projection Sieving** that bridges number theory, discrete harmonic analysis, and random matrix theory (RMT):
-
-1. **Positional Index Isomorphism:** By projecting $\mathbb{N}$ onto the unit group $(\mathbb{Z}/6\mathbb{Z})^\times = \{1, 5\}$, divisibility $p \mid N$ translates into a topological lattice-avoidance problem over discrete indices $k \in \mathbb{N}^+$.
-2. **Hardware-Friendly Architecture:** Because primality is evaluated on-demand without maintaining a boolean marking array of size $N$, the working state requires only storing base prime tuples up to $\sqrt{N}$. This provides an optimal solution for embedded hardware, IoT devices, and lightweight cryptography.
-3. **Discrete Hilbert-Pólya Analogue:** While the continuous zeros of $\zeta(s)$ obey Gaussian Unitary Ensemble (GUE) statistics, our real-symmetric discrete sieve operator $\mathbf{H}_N$ serves as a real-valued, time-reversal symmetric quantum analogue governed by the Gaussian Orthogonal Ensemble (GOE).
+While classical wheel sieves apply a single symmetric activation boundary $\kappa_{\min}(p) = (p^2-1)/6$ across all residue classes, this work establishes that this boundary is suboptimal for channel $\mathcal{C}_5$. The correct threshold is strictly delayed, deterministic, and dictated by a canonical chiral pairing across opposite channels designated **prime-coprime entanglement**.
 
 ---
 
-## 🧭 Conceptual Architecture
+## 📐 Mathematical Core & Key Theoretical Results
 
-```mermaid
-graph TD
-    A["Algebraic Foundation<br>Ring Z/6Z & Unit Group (Z/6Z)ˣ"] --> B["Positional Isomorphism<br>N = 6k ± 1 ↔ k"]
-    B --> C["Prime-Coprime Entanglement<br>Asymmetric Thresholds Kmin±"]
-    
-    C --> D["Ultra-Low Memory Sieve<br>Θ(√N/log N) Footprint"]
-    C --> E["Ground State Topology<br>Twin Primes at Δk = 0"]
-    C --> F["Discrete Sieve Operator<br>H_N = M Mᵀ Matrix"]
-    
-    F --> G["Degenerate Null Space λ = 0<br>Isolates Prime States"]
-    F --> H["Excited Spectrum λ > 0<br>GOE Quantum Chaos ⟨r⟩ ≈ 0.4989"]
-    
-    style A fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
-    style C fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
-    style F fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style H fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+### 1. Explicit Asymmetric Activation Thresholds ($\kappa_{\min}^\pm$)
+For every base prime $p = 6k_p + \varepsilon_p > 3$ with $\varepsilon_p \in \{+1, -1\}$, we formalize the **positional coprime** $\mathrm{Cop}(p)$ as the minimal prime $q = 6k_q - \varepsilon_p$ in the opposite channel satisfying:
+$$k_q \ge \begin{cases} k_p, & \text{if } \varepsilon_p = -1 \ (p \in \mathcal{C}_5), \\ k_p + 1, & \text{if } \varepsilon_p = +1 \ (p \in \mathcal{C}_1). \end{cases}$$
+
+Setting $\mathrm{NextKop}(p) = k_q$, the exact activation boundaries in the two channels are:
+$$\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p \quad (\mathcal{C}_1), \qquad \kappa_{\min}^-(p) = p\,\mathrm{NextKop}(p) - \varepsilon_p k_p \quad (\mathcal{C}_5).$$
+
+* **Strict Threshold Domination (Theorem 2.9):** For every $p \in \mathcal{P}_{>3}$, $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ holds strictly, with equality if and only if $p \in \mathcal{C}_5$ and $k_q = k_p$, in which case $\{p, \mathrm{Cop}(p)\}$ forms a twin-prime pair.
+
+### 2. Twin Primes as the Entanglement Ground State
+* **Quadratic Annihilator (Theorem 3.2):** An index $k \in \mathbb{N}^+$ generates a twin-prime pair $(6k-1, 6k+1)$ if and only if:
+  $$k^2 - k_p^2 \not\equiv 0 \pmod p \qquad \forall p \in \mathcal{P}_{>3}, \ p \le \sqrt{6k+1}.$$
+* **Local Ground State (Proposition 3.3):** The entanglement jump $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ vanishes ($\Delta k(p) = 0$) if and only if $p \in \mathcal{C}_5$ and $p+2$ is prime.
+* **Hardy–Littlewood Heuristic (Proposition 3.4):** Under the standard local independence hypothesis, the surviving density of the quadratic annihilator reproduces the Hardy–Littlewood local product:
+  $$\prod_{p \ge 5} \left(1 - \frac{1}{(p-1)^2}\right) = \frac{4}{3}C_2.$$
+
+### 3. Complexity & Asymptotic Optimality in Positional Sieving
+* **Working Memory (Theorem 4.4):** $\Theta(\sqrt{N}/\log N)$ words (no boolean array of size $N$ is allocated).
+* **Time Complexity (Theorem 4.5):** $O(N^{3/2}/\log N)$ elementary operations.
+* **Matching Lower Bound (Theorem 4.6):** Any deterministic, state-vectorless sieve algorithm certifying primality via positional divisibility requires $\Omega(N^{3/2}/\log N)$ operations in the worst case. The algorithm is therefore asymptotically optimal within the state-vectorless positional class.
+
+### 4. Structural Optimality of Modulus $m=6$
+* **Algebraic Minimality (Theorem 5.4):** $m=6$ uniquely minimizes the candidate survival density $\rho(m) = \phi(m)/m = 1/3$ among all moduli with $\phi(m) \le 2$.
+* **Analytic $L$-Value Identity (Theorem 5.5):** For the principal character $\chi_0^{(6)}$ and the primitive quadratic character $\chi_{12} = \chi_{-4}\chi_0^{(3)}$:
+  $$L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \frac{\pi^2}{9}.$$
+
+---
+
+## 🛡️ Formal Verification in Lean 4 (Mathlib4)
+
+All algebraic results in the manuscript are certified in **Lean 4** (v4.35.0) with strictly **0 `sorry` gaps** and **0 global `axiom` declarations**. The suite comprises **19 self-contained modules** (91 theorems, 30 definitions) audited by the Lean 4 kernel:
+
+| Module Name | Level | Reference | Key Formally Certified Result |
+| :--- | :---: | :--- | :--- |
+| `ModularClassification.lean` | **N1** | Thm 2.1 | Exhaustive residue classification and prime coverage for $p > 3$. |
+| `UnitGroupStructure.lean` | **N1** | §2.1 | Group $(\mathbb{Z}/6\mathbb{Z})^\times = \{1, 5\}$ and chiral involution $5 \cdot 5 \equiv 1 \pmod 6$. |
+| `PositionalCongruence.lean` | **N1** | Lem 2.3 | Equivalence $p \mid (6k+\varepsilon) \iff p \mid (k - \varepsilon_p\varepsilon k_p)$ via Bézout identity. |
+| `KminPlus.lean` | **N1** | Thm 2.5 | Symmetric threshold formula $\kappa_{\min}^+(p) = p k_p + \varepsilon_p k_p$. |
+| `EntanglementThresholds.lean` | **N1** | Thm 2.8 | Asymmetric threshold formulas $\kappa_{\min}^-(p)$ across all 4 chiral cases. |
+| `CopExistence.lean` | **N1-P** | Def 2.6, Thm 2.7 | Predicate $\mathrm{IsCop}$ and existence conditional on Dirichlet's theorem (parametric). |
+| `ThresholdSeparation.lean` | **N1** | Thm 2.9 | Strict inequality $\kappa_{\min}^-(p) > \kappa_{\min}^+(p)$ proved via `nlinarith` and `ring`. |
+| `CompositeStructure.lean` | **N1** | Prop A.1 | Full local branching equivalence for composite candidates. |
+| `TwinPrimeGroundState.lean` | **N1** | Thm 3.2 | Equivalence between twin primes and quadratic annihilator survival. |
+| `TwinPrimesBoth.lean` | **N1** | Rem 2.10 | Mono-prime channel incompatibility ($p \ge 5$ cannot divide $6k\pm 1$ simultaneously). |
+| `TwinPrimesExt.lean` | **N1** | §3.3 | Finite Hardy–Littlewood factorization: $\mathrm{survival} = \mathrm{coprime} \times \mathrm{HL}$. |
+| `HardyLittlewood.lean` | **N1** | Prop 3.4 | Field identity $1 - (p-1)^{-2} = (p-2)p/(p-1)^2$ and numerical anchor at $p=5$. |
+| `EulerFactorization.lean` | **N1** | §2.2 | Finite Euler product separation over active channels $\mathcal{C}_1 \cup \mathcal{C}_5$. |
+| `DigitalFilter5.lean` | **N1** | Thm 4.2 | Modulo 5/10 residue reductions ($k \equiv 4,9 \pmod{10}$ and $k \equiv 1,6 \pmod{10}$). |
+| `Complexity.lean` | **N1** | Thms 4.4–4.5 | Positivity and algebraic formulation of memory/time bounds. |
+| `SieveOperatorSelfAdjoint.lean`| **N1** | §4.3 | Self-adjointness $(M M^T)^T = M M^T$ over arbitrary commutative rings. |
+| `ChiralConvergence.lean` | **N1** | §5 | Ratio identity $c_1/c_5 = 1 + (c_1 - c_5)/c_5$ for empirical convergence. |
+| `OptimalityM6.lean` | **N1** | Thm 5.4 | Strict minimization of $\rho(m) = \phi(m)/m$ at $m=6$ among $\phi(m) \le 2$. |
+| `AnalyticOptimality.lean` | **N1-P** | Thm 5.5 | Proof that $L(2, \chi_0^{(6)}) = [L(1, \chi_{12})]^2 = \pi^2/9$ (conditional on $\zeta(2), L(1, \chi_{-4})$). |
+
+* **Level N1 (17 modules):** Pure constructive/algebraic theorems proven strictly from Lean 4/Mathlib axioms.
+* **Level N1-P (2 modules):** Pure proofs where external analytic inputs (Dirichlet, classical $L$-values) are localized as explicit signature hypotheses, preventing global axiomatic pollution.
+
+---
+
+## ⚡ Computational Benchmark Pipeline
+
+The empirical validation is implemented as an autonomous JIT-compiled engine in **Python 3.13 / Numba 0.61**:
+
+1. **Protocol Rigor (§5.1):** Warm-up iterations, median over 10 repetitions, IQR dispersion, and 95% bootstrap confidence intervals ($B = 10^4$). Single-threaded CPU execution.
+2. **Exact Counting (§5.2):** Certified exact prime counting $\pi(N)$ up to $N \sim 3 \times 10^8$ without omission or false detection (reproducing values matching Oliveira e Silva et al.).
+3. **Transition Ratios (§5.3):** Empirical runtime scaling ratios match theoretical predictions $\Theta(N^{3/2}/\log N)$ to within 5% for all scales $N \ge 10^6$.
+4. **Entanglement Jumps (§5.4):** Complete distribution of $\Delta k(p) = \mathrm{NextKop}(p) - k_p$ at two scales ($N \sim 6 \times 10^7$ and $N \sim 6 \times 10^8$) with Wilson 95% confidence intervals. Demonstrates that ground-state density ($\Delta k = 0$) decreases from 15.75% to 13.83%, consistent with twin-prime decay.
+5. **Record Jumps (§5.5):** Analysis of 32 record jumps up to $N \sim 6 \times 10^8$ (maximum $\Delta k = 87$ at $p = 393{,}202{,}127$), comparative model fitting (power law vs. exponential law via AIC/BIC), and Hill tail index estimation.
+
+---
+
+## 📁 Repository Structure
+
+```text
+modular-projection-sieve/
+├── Papers/
+│   └── ATMPS.pdf                           # Full LaTeX manuscript (amsart, MoC format)
+├── Notebooks/
+│   ├── Lean4_Theory_of_Modular_Projection_Sieving.ipynb # Master Colab notebook (interactive Lean 4 audit)
+│   └── ATM_Experimental_Suite.ipynb         # Benchmarking engine, timing logs & Wilson CIs
+├── Lean/
+│   ├── lean-toolchain                           # Lean toolchain specification (v4.35.0)
+│   ├── lakefile.toml                            # Lake workspace configuration
+│   ├── lake-manifest.json                       # Mathlib4 frozen dependency manifest
+│   ├── ATM_Lean.lean                            # Root aggregation module
+│   └── ATM_Lean/                                # 19 verified modules (N1 & N1-P)
+│       ├── ModularClassification.lean
+│       ├── PositionalCongruence.lean
+│       ├── ThresholdSeparation.lean
+│       ├── TwinPrimeGroundState.lean
+│       └── ...
+├── Archive/
+│   └── ATM_Lean4_Reproducibility_Suite.zip      # Byte-level audit archive (SHA-256: 0ee5544f...)
+├── LICENSE                                      # MIT License
+└── README.md                                    # Repository documentation
+```
+---
+
+## 🚀 Quick Reproduction Guide
+
+### 1. Automated Execution via Google Colab
+
+Click the badge below to run the verified Lean 4 kernel audit and Python benchmarks directly in a browser environment:
+
+### 2. Local Lean 4 Verification
+
+Requires `elan` installed on Linux/macOS:
+
+```bash
+# Clone the repository
+git clone [https://github.com/NachoPeinador/modular-projection-sieve.git](https://github.com/NachoPeinador/modular-projection-sieve.git)
+cd modular-projection-sieve/Lean
+
+# Synchronize dependencies and download Mathlib4 cache
+lake update
+lake exe cache get!
+
+# Compile and audit the complete formal library
+lake build ATM_Lean
+
+# Audit individual modules directly against the Lean 4 kernel
+lake env lean ATM_Lean/ThresholdSeparation.lean
+lake env lean ATM_Lean/TwinPrimeGroundState.lean
+lake env lean ATM_Lean/CompositeStructure.lean
+
+```
+
+### 3. Local Python Benchmarking
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install numpy numba scipy
+
+# Execute benchmark suite up to N ~ 3 x 10^8
+python -c "import numba; print('Numba version:', numba.__version__)"
+jupyter notebook Notebooks/Experimental_Validation_ATM_Engine.ipynb
 
 ```
 
 ---
 
-## 📊 Performance & Complexity Comparison
+## 📜 Citation
 
-The table below positions the Modular Projection Sieve within the classical time-space trade-off hierarchy:
+If you utilize this algebraic framework, the asymmetric threshold formulation, or the Lean 4 formalization library in your research, please cite:
 
-| Algorithm | Working Memory | Time Complexity | Logical Complexity | Ideal Use Case |
-| --- | --- | --- | --- | --- |
-| **Classical Eratosthenes** | $O(N)$ | $O(N \log \log N)$ | Minimal | Large RAM Workstations |
-| **Segmented Sieve** | $O(\sqrt{N} + S)$ | $O(N \log \log N)$ | Medium | High-Speed CPU Slicing |
-| **Sorenson Compact Sieve** | $O(\sqrt{N})$ | $O(N)$ | High | Algorithmic Optimization |
-| **Modular Projection (This Work)** | $\mathbf{\Theta(\sqrt{N}/\log N)}$ | $\mathbf{O(N^{3/2}/\log N)}$ | **Low (Ultra-Light)** | **IoT, Embedded & Smartcards** |
-| **Sieve of Atkin** | $O(N^{1/2+\epsilon})$ | $O(N/\log \log N)$ | Very High | Theoretical Upper Bounds |
-
----
-
-## 🚀 Reproducibility: Interactive Computational Laboratory
-
-To guarantee 100% open-science reproducibility, the full empirical audit and formal proof suite are provided as a comprehensive, all-in-one master notebook. You can execute all experiments, certify the mathematical foundations, generate the figures, and verify the claims directly in your browser:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/modular-projection-sieve/blob/main/Notebooks/Algebraic_Theory_of_Modular_Projection_Sieving.ipynb)
-
-### 🛠️ Experimental Validation Pipeline (Python / Numba)
-
-The notebook executes a 7-stage empirical verification pipeline directly mapped to the paper's theorems, tables, and sections:
-
-* **Stage 0 — Logic Audit & Absolute Correctness:** Pure Python reference implementation verified against the Sieve of Eratosthenes to guarantee a $0.0\%$ error rate and certify twin-entanglement topology.
-* **Stage 1 — $K_{\min}\pm$ Entanglement (Theorems 3.5 & 4.10):** Strict implementation of form-specific threshold formulas based on positional coprime theory (`NextKop`).
-* **Stage 2 — Absolute Count Correctness (Theorems 6.2 & 6.3):** Generation of exact counts for the $\pi(N)$ function up to $N=10^9$ without false positives or negatives, validating **Table 6.1**.
-* **Stage 3 — Spatial Complexity $\Theta(\sqrt{N}/\log N)$ (Theorem 5.1):** Empirical demonstration of working memory collapse ($53.1\text{ KB}$ at $N=10^9$), reproducing **Table 6.2**.
-* **Stage 4 — Temporal Complexity Scaling (Theorems 5.3 & 6.4):** Analysis of asymptotic jump ratios $O(N^{1.5}/\log N)$, validating **Table 6.3**.
-* **Stage 5 — Entangled Chiral Symmetry (Proposition 6.5):** Empirical confirmation that the channel ratio $c_1/c_5$ between $6k+1$ and $6k-1$ primes converges strictly to $1.0000$.
-* **Stage 6 — GOE Spectroscopy & Hilbert-Pólya Analogue (Section 6.7 & Theorem 4.7):** Construction and exact diagonalization of the discrete self-adjoint Hamiltonian $\mathbf{H}\_N = M M^T$ (up to $10^7$ states), confirming 99.9902% null-space degeneracy ($\lambda = 0$) isolating primes and GOE quantum level repulsion ($\langle r\_i \rangle \approx 0.4989$, median $r_{\text{med}} \approx 0.4983$).
-
----
-
-### 🛡️ Formal Verification Module (Lean 4)
-
-The paper grounds the absolute correctness of the algorithm and the spectral topology on mathematical pillars formally certified in the **Lean 4** proof assistant without omitted axioms (`sorry-free`):
-
-1. **Theorem 2.1 & Lemma 3.1:** Modular classification over $(\mathbb{Z}/6\mathbb{Z})^\times$ and positional index isomorphism.
-2. **Theorems 3.5 & 3.7:** Threshold calculation and Prime-Coprime Entanglement exactness.
-3. **Theorem 4.1 ($\mathbb{Z}/6\mathbb{Z}$ Algebraic Core):** Modular involution and strict unit group isomorphism.
-4. **Theorem 4.3:** Topological collapse of the Spectral Annihilator.
-5. **Self-Adjointness (Spectral Theorem):** Structural symmetry of $\mathbf{H}\_N = M M^T$, proving energy levels are strictly real observables ($\sigma(\mathbf{H}\_N) \subset \mathbb{R}\_{\ge 0}$).
-6. **Corollary 7.2 (Twin Prime Ground State):** Exact collision of entanglement in the ground state ($\Delta k = 0$), proving that twin prime interactions collapse into the ultra-symmetric index $k = 6k_p^2$.
-
----
-
-### ⚡ Execution & Hardware Environment Notes
-
-* **Colab vs. Benchmark Environment:** Reported paper execution times were benchmarked on an **AMD EPYC 7B12** processor. Cloud environments (e.g., Google Colab) may dynamically assign different CPUs (such as Intel Xeon @ 2.20 GHz), which can shift execution times by up to a factor of $4\times$.
-* **Invariance of Scientific Metrics:** This hardware variance affects CPU time exclusively and **does not alter numerical correctness, memory scaling, spectral statistics, or any empirical metric**.
-* **CPU Time Tracking:** CPU measurements utilize `time.process_time()` to capture exclusive process execution time, bypassing cloud hypervisor noise. High-speed evaluation leverages JIT compilation via `numba`.
-
----
-
-## 📁 Repository Structure
-
-```text
-## 📁 Repository Structure
-
-```text
-modular-projection-sieve/
-├── 📂 Papers/                                                  # Academic Manuscripts & LaTeX Source
-│   ├── 📄 ATM_Projection_Sieve.pdf                               # Full English Paper (PDF)
-│   ├── 📄 TAC_por_Proyeccion_Modular.pdf                         # Full Spanish Paper (PDF)
-│   └── 📝 ATM_Projection_Sieve.tex                               # LaTeX Source Code
-│
-├── 📂 Notebooks/                                               # Master Experimental & Verification Lab
-│   ├── 📓 Algebraic_Theory_of_Modular_Projection_Sieving.ipynb # Full English Master Notebook (Python + GOE + Lean 4)
-│   ├── 📄 Algebraic_Theory_of_Modular_Projection_Sieving.pdf   # Complete PDF Print of English Execution
-│   ├── 📓 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.ipynb # Full Spanish Master Notebook
-│   ├── 📄 Teoría_Algebraica_de_Cribado_por_Proyección_Modular.pdf   # Complete PDF Print of Spanish Execution
-│   └── 📄 primes_audit_k100000_sample.txt                       # Execution audit sample
-│
-├── 📂 Images/                                                  # Generated High-Resolution Figures
-│   ├── 📊 ground_state_spectrum.png                            # Twin prime ground-state spectrum (Δk=0)
-│   ├── 📈 asymptotic_evolution_cramer.png                      # Topological gap evolution & Cramér bound
-│   └── 📉 goe_spectroscopy_staircase.png                       # GOE level repulsion & spectral staircase
-│
-├── 📂 Lean/                                                    # Formal Proof Project (Lean 4 / Mathlib)
-│   ├── 📄 lean-toolchain                                       # Fixed Lean 4 compiler version
-│   ├── 📄 lakefile.toml                                        # Lake build configuration
-│   ├── 📄 lake-manifest.json                                   # Frozen Mathlib dependency manifest
-│   ├── 📄 Entanglement.lean                                    # Core entanglement theory proof module
-│   ├── 📄 Full_Validation.lean                                 # Full axiom-free certification suite
-│   └── 📂 Entanglement/                                        # Auxiliary proof submodules
-│
-├── 📜 .gitignore                                               # Git ignore rules (.pkl.gz, build caches)
-├── 📜 LICENSE                                                  # MIT License
-├── 📜 README_ES.md                                             # Main Repository Documentation spanish
-└── 📜 README.md                                                # Main Repository Documentation
+```bibtex
+@article{Peinador2026ATM,
+  author    = {Peinador Sala, Jos{\'e} Ignacio},
+  title     = {Algebraic Theory of Modular Projection Sieving: Prime-Coprime Entanglement and Asymmetric Activation Thresholds},
+  journal   = {Submitted to Mathematics of Computation},
+  year      = {2026},
+  note      = {AMS Submission ID: 261023-PeinadorSala. Complete verification suite archived at Zenodo: \url{[https://doi.org/10.5281/zenodo.22043294](https://doi.org/10.5281/zenodo.22043294)}}
+}
 
 ```
 
@@ -162,51 +192,4 @@ modular-projection-sieve/
 
 ## ⚖️ License
 
-This repository is released under the **[MIT License](https://www.google.com/search?q=LICENSE)**.
-
-*You are free to use, modify, distribute, and integrate this software and formal proofs for academic, personal, or commercial applications, provided credit is given to the original author.*
-
----
-
-## 📝 Citation
-
-If this modular projection framework, the $K_{\min}\pm$ entanglement formulation, or the Lean 4 formal proofs assist in your research, please cite:
-
-**BibTeX:**
-
-```bibtex
-@misc{peinador2026modular,
-  author       = {Peinador Sala, José Ignacio},
-  title        = {Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in Prime Distribution},
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22043294},
-  url          = {[https://github.com/NachoPeinador/modular-projection-sieve](https://github.com/NachoPeinador/modular-projection-sieve)}
-}
-
-```
-
-**APA:**
-
-> Peinador Sala, J. I. (2026). *Algebraic Theory of Modular Projection Sieving: Structural Isomorphisms and Spectral Connections in Prime Distribution*. Zenodo. https://doi.org/10.5281/zenodo.22043294
-
----
-
-## 🔭 Philosophical Context
-
-> *“Simplicity is not a luxury, but the fundamental footprint of deep order.”*
-
-For centuries, the distribution of prime numbers has been viewed through the lens of irreducible randomness, prompting mathematicians to deploy increasingly heavy analytic machinery or brute-force memory arrays. This research emerged from a fundamentally different question: *What if the apparent chaos of primes is an optical illusion born from observing them in an unnatural coordinate system?*
-
-What began as an inquiry into memory compression for resource-constrained hardware unveiled a deeper algebraic reality. The ring $\mathbb{Z}/6\mathbb{Z}$ is not a mere programming trick or a heuristic wheel—it is a noiseless informational channel. By projecting multiplication into a discrete positional space, the prime distribution ceases to behave as isolated noise. Instead, it reveals itself as a self-organizing, chiral network of $K_{\min}\pm$ entanglements, where twin primes emerge naturally as the geometric ground state ($\Delta k = 0$) and the sieve operator’s spectrum naturally couples to the universal statistics of quantum chaos ($\text{GOE}$).
-
-This project was conceived and developed entirely outside traditional academic institutions. It stands as a reminder that the frontiers of theoretical physics, computer science, and pure mathematics are open to anyone equipped with unconditioned curiosity, rigorous empirical methodology, and the courage to listen when the integers reveal their underlying geometry.
-
----
-
-**Last Update:** August 2026 | **Status:** Under Review at SEMA Journal (ID: `SEMJ-D-26-00238`) | **Built with:** ⚛️, 🐍 & ⊢
-
----
-
-> 🌌 **The Arithmetic Universe / El Universo Aritmético**
-> 🇬🇧 *This research is part of the theoretical framework of **The Arithmetic Universe**, which postulates that fundamental reality is not hidden in infinite chaos, but in the elegant architecture of integers.* 🔗 **[Explore the central hub & theory here](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
+The Lean 4 verification library, computational algorithms, and datasets in this repository are distributed under the **[MIT License](https://www.google.com/search?q=LICENSE)**.
